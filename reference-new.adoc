@@ -1,0 +1,66 @@
+---
+sidebar: sidebar
+permalink: reference-new.html
+keywords: what's new, new, features, release notes, enhancements
+summary: Cloud Volumes ONTAP 9.11.0 includes a new enhancement.
+---
+
+= What's new in Cloud Volumes ONTAP 9.11.0
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP 9.11.0 includes a new enhancement.
+
+Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html[Cloud Manager Release Notes^] for details.
+
+== 9.11.0 GA (16 Mar 2022)
+
+The Cloud Volumes ONTAP 9.11.0 GA release is now available in AWS, Azure, and Google Cloud. This release includes the following enhancement.
+
+=== ONTAP S3 support in AWS
+
+You can now provide S3 object storage from Cloud Volumes ONTAP in AWS (Microsoft Azure is already supported). Cloud Volumes ONTAP supports S3 as an option for scale-out storage, in addition to classic file-based protocols like NFS and SMB.
+
+Note the following:
+
+* The main use case for ONTAP S3 with Cloud Volumes ONTAP is a general purpose object store.
+* At this time, the S3 protocol is not supported with Cloud Volumes ONTAP in Google Cloud.
+* Cloud Manager doesn't provide any management capabilities for the ONTAP S3 feature.
+
+https://docs.netapp.com/us-en/ontap/object-storage-management/index.html[Learn how to configure and manage S3 object storage services in ONTAP^].
+
+== Required version of the Connector
+
+The Cloud Manager Connector must be running version 3.9.16 or later to deploy new Cloud Volumes ONTAP 9.11.0 systems and to upgrade existing systems to 9.11.0.
+
+TIP: Automatic upgrades of the Connector are enabled by default so you should be running the latest version.
+
+== Upgrade notes
+
+Read through these notes to learn more about upgrading to this release.
+
+=== How to upgrade
+
+Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
+
+http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html[Learn how to upgrade when Cloud Manager notifies you^].
+
+=== Supported upgrade path
+
+You can upgrade to Cloud Volumes ONTAP 9.11.0 from the 9.10.1 release. Cloud Manager will prompt you to upgrade eligible Cloud Volumes ONTAP systems to this release.
+
+=== Downtime
+
+* The upgrade of a single node system takes the system offline for up to 25 minutes, during which I/O is interrupted.
+
+* Upgrading an HA pair is nondisruptive and I/O is uninterrupted. During this nondisruptive upgrade process, each node is upgraded in tandem to continue serving I/O to clients.
+
+=== c4, m4, and r4 instance types
+
+Starting with the 9.8 release, c4, m4, and r4 instance types aren't supported with new Cloud Volumes ONTAP systems. If you have an existing Cloud Volumes ONTAP system that's running on a c4, m4, or r4 instance type, you can still upgrade to this release.
+
+We recommend changing to an instance type in the c5, m5, or r5 instance family.
