@@ -80,7 +80,7 @@ sidebar:
     - title: Cloud provider integrations
       url: /reference-provider-integrations.html
     - title: Legal notices
-      url: /reference-legal-notices.html
+      url: /legal-notices.html
 product-family:
   name: Cloud Manager
   repo: cloud-manager-family
