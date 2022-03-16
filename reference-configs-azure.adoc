@@ -1,0 +1,282 @@
+---
+sidebar: sidebar
+permalink: reference-configs-azure.html
+keywords: vm, explore, standard, premium, byol, capacity, maximum, virtual machine, Cloud Volumes ONTAP, supported, configurations, disks, sizes
+summary: Several Cloud Volumes ONTAP configurations are supported in Azure.
+---
+
+= Supported configurations in Azure
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Several Cloud Volumes ONTAP configurations are supported in Azure.
+
+== Supported configurations by license
+
+Cloud Volumes ONTAP is available in Azure as a single node system and as a high-availability (HA) pair of nodes for fault tolerance and nondisruptive operations.
+
+Upgrading a single node system to an HA pair is not supported. If you want to switch between a single node system and an HA pair, then you need to deploy a new system and replicate data from the existing system to the new system.
+
+=== Single node systems
+
+You can choose from the following configurations when deploying Cloud Volumes ONTAP as a single-node system in Azure:
+
+[cols=7*,cols="h,d,d,d,d,d,d",options="header"]
+|===
+|
+| Freemium
+| PAYGO Explore
+| PAYGO Standard
+| PAYGO Premium
+| Node-based license
+| Capacity-based license
+
+| Maximum system capacity
+(disks + object storage) | 500 GiB | 2 TiB ^1^ | 10 TiB | 368 TiB | 368 TiB per license | 2 PiB
+
+| Supported virtual machine types
+
+a|
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+* DS15_v2
+* L8s_v2 ^2^
+* E4s_v3
+* E8s_v3
+* E32s_v3 ^3^
+* E48s_v3 ^3^
+* E64is_v3 ^3^
+* E4ds_v4 ^3^
+* E8ds_v4 ^3^
+* E32ds_v4 ^3^
+* E48ds_v4 ^3^
+* E80ids_v4 ^3^
+
+a|
+* E4s_v3
+* E4ds_v4 ^3^
+
+a|
+* DS4_v2
+* DS13_v2
+* E8s_v3
+* E8ds_v4 ^3^
+
+a|
+* DS5_v2
+* DS14_v2
+* DS15_v2
+* E32s_v3 ^3^
+* E48s_v3 ^3^
+* E64is_v3 ^3^
+* E32ds_v4 ^3^
+* E48ds_v4 ^3^
+* E80ids_v4 ^3^
+
+a|
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+* DS15_v2
+* L8s_v2 ^2^
+* E4s_v3
+* E8s_v3
+* E32s_v3 ^3^
+* E48s_v3 ^3^
+* E64is_v3 ^3^
+* E4ds_v4 ^3^
+* E8ds_v4 ^3^
+* E32ds_v4 ^3^
+* E48ds_v4 ^3^
+* E80ids_v4 ^3^
+
+a|
+* DS4_v2
+* DS5_v2
+* DS13_v2
+* DS14_v2
+* DS15_v2
+* L8s_v2 ^2^
+* E4s_v3
+* E8s_v3
+* E32s_v3 ^3^
+* E48s_v3 ^3^
+* E64is_v3 ^3^
+* E4ds_v4 ^3^
+* E8ds_v4 ^3^
+* E32ds_v4 ^3^
+* E48ds_v4 ^3^
+* E80ids_v4 ^3^
+
+| Supported disk types ^4^ 6+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks
+
+|===
+
+Notes:
+
+. Data tiering to Azure Blob storage isn't supported with PAYGO Explore.
+
+. This VM type includes local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html[Learn more^].
+
+. These VM types use an https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd[Ultra SSD^] for VNVRAM, which provides better write performance.
++
+If you choose any of these VM types when you deploy a new Cloud Volumes ONTAP system, you can't change to another VM type that _doesn't_ use an Ultra SSD for VNVRAM. For example, you can't change from E8ds_v4 to E8s_v3, but you can change from E8ds_v4 to E32ds_v4 because both of those VM types use Ultra SSDs.
++
+Conversely, if you deployed Cloud Volumes ONTAP using any other VM type, you won't be able to change to a VM type that uses an Ultra SSD for VNVRAM. For example, you can't change from E8s_v3 to E8ds_v4.
+
+. Enhanced write performance is enabled when using SSDs.
+
+. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+
+. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
+
+=== HA pairs
+
+You can choose from the following configurations when deploying Cloud Volumes ONTAP as an HA pair in Azure.
+
+[cols=6*,cols="h,d,d,d,d,d",options="header"]
+|===
+|
+| Freemium
+| PAYGO Standard
+| PAYGO Premium
+| Node-based license
+| Capacity-based license
+
+| Maximum system capacity
+(disks + object storage) | 500 GiB | 10 TiB | 368 TiB | 368 TiB per license | 2 PiB
+
+| Supported virtual machine types
+
+a|
+* DS4_v2
+* DS5_v2 ^1^
+* DS13_v2
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E8s_v3
+* E48s_v3 ^1^
+* E8ds_v4 ^1^
+* E32ds_v4 ^1^
+* E48ds_v4 ^1^
+* E80ids_v4 ^2^
+
+a|
+* DS4_v2
+* DS13_v2
+* E8ds_v4 ^1^
+
+a|
+* DS5_v2 ^1^
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E8s_v3
+* E48s_v3 ^1^
+* E32ds_v4 ^1^
+* E48ds_v4 ^1^
+* E80ids_v4 ^2^
+
+a|
+* DS4_v2
+* DS5_v2 ^1^
+* DS13_v2
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E8s_v3
+* E48s_v3 ^1^
+* E8ds_v4 ^1^
+* E32ds_v4 ^1^
+* E48ds_v4 ^1^
+* E80ids_v4 ^2^
+
+a|
+* DS4_v2
+* DS5_v2 ^1^
+* DS13_v2
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E8s_v3
+* E48s_v3 ^1^
+* E8ds_v4 ^1^
+* E32ds_v4 ^1^
+* E48ds_v4 ^1^
+* E80ids_v4 ^2^
+
+| Supported disk types 5+| Premium page blobs
+
+|===
+
+Notes:
+
+. Cloud Volumes ONTAP supports high write speed with these VM types when using an HA pair. High write speed is supported with all instance types when using a single node system. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html[Learn more about choosing a write speed^].
+
+. This VM is recommended only when Azure maintenance control is needed. It's not recommended for any other use case due to the higher pricing.
+
+. PAYGO Explore isn't supported with HA pairs in Azure.
+
+. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+
+. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
+
+== Supported disk sizes
+
+In Azure, an aggregate can contain up to 12 disks that are all the same type and size.
+
+=== Single node systems
+
+Single node systems use Azure Managed Disks. The following disk sizes are supported:
+
+[cols=3*,options="header"]
+|===
+
+| Premium SSD
+| Standard SSD
+| Standard HDD
+
+a|
+* 500 GiB
+* 1 TiB
+* 2 TiB
+* 4 TiB
+* 8 TiB
+* 16 TiB
+* 32 TiB
+
+a|
+* 100 GiB
+* 500 GiB
+* 1 TiB
+* 2 TiB
+* 4 TiB
+* 8 TiB
+* 16 TiB
+* 32 TiB
+
+a|
+* 100 GiB
+* 500 GiB
+* 1 TiB
+* 2 TiB
+* 4 TiB
+* 8 TiB
+* 16 TiB
+* 32 TiB
+
+|===
+
+=== HA pairs
+
+HA pairs use Premium page blobs. The following disk sizes are supported:
+
+* 500 GiB
+* 1 TiB
+* 2 TiB
+* 4 TiB
+* 8 TiB
