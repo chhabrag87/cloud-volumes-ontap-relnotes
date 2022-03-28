@@ -117,10 +117,6 @@ With this licensing model, each individual Cloud Volumes ONTAP system supports u
 
 There is no maximum capacity limitation when it comes to the license itself.
 
-=== License conversions
-
-Conversions to another licensing option isn't supported. If you want to transition to capacity-based licensing, you can deploy a new Cloud Volumes ONTAP system that uses capacity-based charging and then replicate the data to that new system.
-
 === Notes about charging
 
 * If you exceed your BYOL capacity or if your license expires, you'll be charged for overages at the hourly rate based on your marketplace subscription.
@@ -183,7 +179,11 @@ Node-based licensing is still available for existing customers:
 * If you have an active license, BYOL is available for license renewals only.
 * If you have an active marketplace subscription, charging is still available through that subscription.
 
-Conversions to another licensing option isn't supported. If you want to transition to capacity-based licensing, you can purchase a license, deploy a new Cloud Volumes ONTAP system, and then replicate the data to that new system.
+== License conversions
+
+Converting an existing Cloud Volumes ONTAP system to another licensing method isn't supported. The three current licensing methods are capacity-based licensing, Keystone Flex Subscriptions, and node-based licensing. For example, you can't convert a system from node-based licensing to capacity-based licensing (and vice versa).
+
+If you want to transition to another licensing method, you can purchase a license, deploy a new Cloud Volumes ONTAP system using that license, and then replicate the data to that new system.
 
 == Max number of systems
 

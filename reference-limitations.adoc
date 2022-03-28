@@ -79,7 +79,7 @@ The following features are not supported with Cloud Volumes ONTAP:
 * Interface groups
 * Intranode LIF failover
 * MetroCluster
-* ONTAP S3 in Google Cloud (the S3 protocol is supported in Azure and AWS)
+* ONTAP S3 in AWS and Google Cloud (the S3 protocol is supported in Azure)
 * RAID4, RAID-DP, RAID-TEC (RAID0 is supported)
 * Service Processor
 * SnapLock Compliance and Enterprise modes (only Cloud WORM is supported)
