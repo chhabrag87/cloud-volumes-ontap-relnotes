@@ -1,7 +1,123 @@
 settings:
-  name: "Product Name"
+  name: Cloud Volumes ONTAP 9.11.0 release notes
+  platform: cloud
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
+  versions:
+    - name: Cloud Volumes ONTAP
+      url: /cloud-volumes-ontap-relnotes
+      version-number: "9.10.1"
+    - name: Cloud Volumes ONTAP
+      url: /cloud-volumes-ontap-9100-relnotes
+      version-number: "9.10.0"
+    - name: Cloud Volumes ONTAP
+      url: /cloud-volumes-ontap-991-relnotes
+      version-number: "9.9.1"
+    - name: Cloud Volumes ONTAP
+      url: /cloud-volumes-ontap-990-relnotes
+      version-number: "9.9.0"
+    - name: Cloud Volumes ONTAP
+      url: /cloud-volumes-ontap-98-relnotes
+      version-number: "9.8"
+    - name: Cloud Volumes ONTAP
+      url: /cloud-volumes-ontap-97-relnotes
+      version-number: "9.7"
+    - name: Cloud Volumes ONTAP
+      url: /cloud-volumes-ontap-96-relnotes
+      version-number: "9.6"
+    - name: Cloud Volumes ONTAP
+      url: /cloud-volumes-ontap-95-relnotes
+      version-number: "9.5"
+    - name: Cloud Volumes ONTAP
+      url: /cloud-volumes-ontap-94-relnotes
+      version-number: "9.4"
+    - name: ONTAP Cloud
+      url: /cloud-volumes-ontap-93-relnotes
+      version-number: "9.3"
 sidebar:
+  entries:
+    - title: All Cloud Manager documentation
+      url: https://docs.netapp.com/us-en/cloud-manager-family
+    - title: Release notes home
+      url: /index.html
+    - title: What's new
+      url: /reference-new.html
+    - title: Licensing overview
+      url: /concept-licensing.html
+    - title: Supported configurations
+      entries:
+        - title: AWS
+          url: /reference-configs-aws.html
+        - title: Azure
+          url: /reference-configs-azure.html
+        - title: Google Cloud
+          url: /reference-configs-gcp.html
+    - title: Storage limits
+      entries:
+        - title: AWS
+          url: /reference-limits-aws.html
+        - title: Azure
+          url: /reference-limits-azure.html
+        - title: Google Cloud
+          url: /reference-limits-gcp.html
+    - title: Known issues
+      url: /reference-issues.html
+    - title: Known limitations
+      entries:
+        - title: Common limitations
+          url: /reference-limitations.html
+        - title: Limitations in AWS
+          url: /reference-limitations-aws.html
+        - title: Limitations in Azure
+          url: /reference-limitations-azure.html
+        - title: Limitations in Google Cloud
+          url: /reference-limitations-gcp.html
+    - title: Cloud provider integrations
+      url: /reference-provider-integrations.html
+    - title: Legal notices
+      url: /legal-notices.html
+product-family:
+  name: Cloud Manager
+  repo: cloud-manager-family
+homepage:
+  tiles:
+    - title: Get started
+      links:
+        - title: What's new
+          url: reference-new.html
+        - title: Licensing overview
+          url: concept-licensing.html
+    - title: Amazon Web Services
+      links:
+        - title: Supported configurations
+          url: reference-configs-aws.html
+        - title: Storage limits
+          url: reference-limits-aws.html
+        - title: Limitations
+          url: reference-limitations-gcp.html
+    - title: Google Cloud
+      links:
+        - title: Supported configurations
+          url: reference-configs-gcp.html
+        - title: Storage limits
+          url: reference-limits-gcp.html
+        - title: Limitations
+          url: reference-limitations-gcp.html
+    - title: Microsoft Azure
+      links:
+        - title: Supported configurations
+          url: reference-configs-azure.html
+        - title: Storage limits
+          url: reference-limits-azure.html
+        - title: Limitations
+          url: reference-limitations-azure.html
+    - title: Blogs & community
+      links:
+        - title: NetApp Community
+          url: https://community.netapp.com/t5/Cloud-Data-Services/ct-p/CDS
+        - title: Cloud Central blog
+          url: https://cloud.netapp.com/blog
+        - title: Cloud webinars
+          url: https://cloud.netapp.com/events

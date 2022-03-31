@@ -1,0 +1,121 @@
+---
+sidebar: sidebar
+permalink: reference-new.html
+keywords: what's new, new, features, release notes, enhancements
+summary: Cloud Volumes ONTAP 9.10.1 includes several new features and enhancements.
+---
+
+= What's new in Cloud Volumes ONTAP 9.10.1
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+Cloud Volumes ONTAP 9.10.1 includes several new features and enhancements.
+
+Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html[Cloud Manager Release Notes^] for details.
+
+== Licensing update (9 Feb 2022)
+
+We have introduced the following marketplace changes for Cloud Volumes ONTAP:
+
+* The Essentials package and Professional package are now available in the AWS and Google Cloud Marketplaces.
++
+These by-capacity charging methods enable you to pay by the hour or to purchase an annual contract directly from your cloud provider. You still have the option to purchase a by-capacity license directly from NetApp.
++
+If you have an existing subscription in a cloud marketplace, you're automatically subscribed to these new offerings as well. You can choose by-capacity charging when you deploy a new Cloud Volumes ONTAP working environment.
++
+If you're a new customer, Cloud Manager will prompt you to subscribe when you create a new working environment.
+
+* By-node licensing via the AWS and Google Cloud Marketplaces is deprecated and no longer available for new subscribers. This includes annual contracts and hourly subscriptions (Explore, Standard, and Premium).
++
+This charging method is still available for existing customers who have an active subscription.
+
+link:concept-licensing.html[Learn more about the licensing options for Cloud Volumes ONTAP].
+
+== 9.10.1 GA (31 Jan 2022)
+
+The General Availability (GA) release of Cloud Volumes ONTAP 9.10.1 is now available. The GA release includes bug fixes.
+
+Cloud Manager will prompt you to upgrade existing systems that are running any of the following versions: 9.10.1 RC1, 9.10.0, or 9.9.1.
+
+== Support for more VM types (2 Jan 2021)
+
+As part of the Cloud Manager 3.9.14 release, Cloud Volumes ONTAP is now supported with the following VM types in Microsoft Azure, starting with the 9.10.1 release:
+
+* E4ds_v4
+* E8ds_v4
+* E32ds_v4
+* E48ds_v4
+
+Go to the link:reference-configs-azure.html[supported configurations page^] for more details.
+
+== 9.10.1 RC1 (28 Nov 2021)
+
+Cloud Volumes ONTAP 9.10.1 Release Candidate 1 is now available in AWS, Azure, and Google Cloud. This release includes the following new features and enhancements.
+
+=== HA enhancements in Microsoft Azure
+
+* We reduced the unplanned failover time for Cloud Volumes ONTAP HA pairs running in Microsoft Azure.
+* NFSv4 is now supported.
+
+To make these enhancements available to Cloud Volumes ONTAP, you need to enable a feature on your Azure subscription. An Azure user who has “Owner” privileges can enable the feature from the Azure CLI:
+
+[source,azurecli]
+az account set -s AZURE_SUBSCRIPTION_NAME_OR_ID
+az feature register --name EnableHighAvailabilityMode --namespace Microsoft.Network
+az provider register -n Microsoft.Network
+
+Cloud Manager will prompt you with these details in an Action Required message for Cloud Volumes ONTAP 9.10.1 systems where the feature needs to be enabled on an Azure subscription.
+
+Note the following:
+
+*	There are no problems with the high availability of your Cloud Volumes ONTAP HA pair. This Azure feature works in concert with ONTAP to reduce the client observed application outage time for NFS protocols that result from unplanned failover events.
+*	Enabling this feature is non-disruptive to Cloud Volumes ONTAP HA pairs.
+*	Enabling this feature on your Azure subscription won't cause issues to other VMs.
+
+=== Security enhancements
+
+We enhanced the security of ONTAP image creation and the security of the Cloud Volumes ONTAP boot disk.
+
+=== Support for Keystone Flex Subscriptions
+
+As part of the Cloud Manager 3.9.13 release, you can now use a Keystone Flex Subscription with Cloud Volumes ONTAP HA pairs. A Keystone Flex Subscription is a pay-as-you-grow subscription-based service that delivers a seamless hybrid cloud experience for those preferring OpEx consumption models to upfront CapEx or leasing.
+
+A Keystone Flex Subscription is supported with all new versions of Cloud Volumes ONTAP that you can deploy from Cloud Manager.
+
+=== Encryption key management
+
+The ONTAP 9.10.1 release includes an enhancement that enables you to use Azure Key Vault (AKV) or the Google Cloud Key Management Service to protect ONTAP encryption keys.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-security.html[Learn more about encryption support for Cloud Volumes ONTAP^].
+
+== Required version of the Cloud Manager Connector
+
+The Cloud Manager Connector must be running version 3.9.13 or later to deploy new Cloud Volumes ONTAP 9.10.1 systems and to upgrade existing systems to 9.10.1.
+
+TIP: Automatic upgrades of the Connector are enabled by default so you should be running the latest version.
+
+== Upgrade notes
+
+* Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
+
+* You can upgrade to Cloud Volumes ONTAP 9.10.1 from the 9.10.0 release and from the 9.9.1 release. Cloud Manager will prompt you to upgrade eligible Cloud Volumes ONTAP systems to the 9.10.1 release.
++
+http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html[Learn how to upgrade when Cloud Manager notifies you^].
+
+* The upgrade of a single node system takes the system offline for up to 25 minutes, during which I/O is interrupted.
+
+* Upgrading an HA pair is nondisruptive and I/O is uninterrupted. During this nondisruptive upgrade process, each node is upgraded in tandem to continue serving I/O to clients.
+
+=== c4, m4, and r4 instance types
+
+Starting with the 9.8 release, c4, m4, and r4 instance types aren't supported with new Cloud Volumes ONTAP systems. If you have an existing Cloud Volumes ONTAP system that's running on a c4, m4, or r4 instance type, you can still upgrade to this release.
+
+We recommend changing to an instance type in the c5, m5, or r5 instance family.
+
+=== DS3_v2
+
+Starting with the 9.9.1 release, the DS3_v2 VM type is no longer supported with new and existing Cloud Volumes ONTAP systems. If you have an existing system running on this VM type, you'll need to change VM types before you upgrade to 9.10.1.
