@@ -34,7 +34,6 @@ NOTE: ONTAP consistency points in the WAFL file system determine data consistenc
 Cloud Volumes ONTAP is supported in China regions as follows.
 
 *	Cloud Volumes ONTAP 9.6 is supported in AWS China regions.
-*	Cloud Volumes ONTAP 9.9 is supported in Azure China regions.
 * Single node systems are supported.
 *	Licenses purchased directly from NetApp are supported.
 
