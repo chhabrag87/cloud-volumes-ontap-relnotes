@@ -96,7 +96,7 @@ homepage:
         - title: Storage limits
           url: reference-limits-aws.html
         - title: Limitations
-          url: reference-limitations-gcp.html
+          url: reference-limitations-aws.html
     - title: Google Cloud
       links:
         - title: Supported configurations
