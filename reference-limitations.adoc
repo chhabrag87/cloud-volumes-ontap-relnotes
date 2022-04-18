@@ -17,9 +17,17 @@ Known limitations identify platforms, devices, or functions that are not support
 
 The following limitations apply to Cloud Volumes ONTAP in all cloud providers: AWS, Azure, and Google Cloud.
 
-== Maximum concurrent replication operations
+== Cloud Volumes ONTAP deployment must not be modified from your cloud provider's console
 
-The maximum number of concurrent SnapMirror or SnapVault transfers for Cloud Volumes ONTAP is 100 per node, regardless of the instance type or machine type.
+Changes to a Cloud Volumes ONTAP system's configuration from your cloud provider's console results in an unsupported configuration. Any changes to the Cloud Volumes ONTAP resources that Cloud Manager creates and manages can impact system stability and Cloud Manager's ability to manage the system.
+
+== Disks and aggregates must be managed from Cloud Manager
+
+All disks and aggregates must be created and deleted directly from Cloud Manager. You should not perform these actions from another management tool. Doing so can impact system stability, hamper the ability to add disks in the future, and potentially generate redundant cloud provider fees.
+
+== Software updates must be completed by Cloud Manager
+
+Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
 
 == Cloud provider snapshots must not be used for your backup and recovery plans
 
@@ -28,6 +36,10 @@ You shouldn't use your cloud provider's snapshots as part of your backup and rec
 https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-cloud.html[Learn how to use the Cloud Backup service to back up and restore ONTAP data^].
 
 NOTE: ONTAP consistency points in the WAFL file system determine data consistency. Only ONTAP can quiesce the WAFL file system to make a crash-consistent backup.
+
+== Automatic application resource management solutions
+
+Automatic application resource management solutions should not manage Cloud Volumes ONTAP systems. Doing so can result in a change to an unsupported configuration. For example, the solution might change Cloud Volumes ONTAP to an unsupported VM instance type.
 
 == Support in China regions
 
@@ -43,21 +55,9 @@ All other locations, versions, configurations, and licenses aren't supported.
 
 Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Other types of VM instances aren't supported.
 
-== Automatic application resource management solutions shouldn't be used
+== Maximum concurrent replication operations
 
-Automatic application resource management solutions should not manage Cloud Volumes ONTAP systems. Doing so can result in a change to an unsupported configuration. For example, the solution might change Cloud Volumes ONTAP to an unsupported VM instance type.
-
-== Software updates must be completed by Cloud Manager
-
-Upgrades of Cloud Volumes ONTAP must be completed from Cloud Manager. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.
-
-== Cloud Volumes ONTAP deployment must not be modified from your cloud provider’s console
-
-Changes to a Cloud Volumes ONTAP configuration from your cloud provider's console results in an unsupported configuration. Any changes to the Cloud Volumes ONTAP resources that Cloud Manager creates and manages can impact system stability and Cloud Manager's ability to manage the system.
-
-== Disks and aggregates must be managed from Cloud Manager
-
-All disks and aggregates must be created and deleted directly from Cloud Manager. You should not perform these actions from another management tool. Doing so can impact system stability, hamper the ability to add disks in the future, and potentially generate redundant cloud provider fees.
+The maximum number of concurrent SnapMirror or SnapVault transfers for Cloud Volumes ONTAP is 100 per node, regardless of the instance type or machine type.
 
 == SnapManager licensing limitation
 
