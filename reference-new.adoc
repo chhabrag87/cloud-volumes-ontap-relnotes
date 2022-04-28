@@ -33,12 +33,6 @@ Note the following:
 
 https://docs.netapp.com/us-en/ontap/object-storage-management/index.html[Learn how to configure and manage S3 object storage services in ONTAP^].
 
-== Required version of the Connector
-
-The Cloud Manager Connector must be running version 3.9.18 or later to deploy new Cloud Volumes ONTAP 9.11.0 systems and to upgrade existing systems to 9.11.0.
-
-TIP: Automatic upgrades of the Connector are enabled by default so you should be running the latest version.
-
 == Upgrade notes
 
 Read through these notes to learn more about upgrading to this release.
@@ -52,6 +46,12 @@ http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ont
 === Supported upgrade path
 
 You can upgrade to Cloud Volumes ONTAP 9.11.0 from the 9.10.1 release. Cloud Manager will prompt you to upgrade eligible Cloud Volumes ONTAP systems to this release.
+
+=== Required version of the Connector
+
+The Cloud Manager Connector must be running version 3.9.18 or later to upgrade existing systems to 9.11.0.
+
+TIP: Automatic upgrades of the Connector are enabled by default so you should be running the latest version.
 
 === Downtime
 
