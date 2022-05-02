@@ -17,9 +17,9 @@ Cloud Volumes ONTAP 9.11.0 includes a new enhancement.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html[Cloud Manager Release Notes^] for details.
 
-== 9.11.0 GA (2 May 2022)
+== 9.11.0 P1 (2 May 2022)
 
-The Cloud Volumes ONTAP 9.11.0 GA release is now available in AWS, Azure, and Google Cloud. This release includes the following enhancement.
+The Cloud Volumes ONTAP 9.11.0 P1 release is now available in AWS, Azure, and Google Cloud. This release includes the following enhancement.
 
 === ONTAP S3 support in AWS
 
