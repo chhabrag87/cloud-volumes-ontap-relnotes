@@ -40,6 +40,7 @@ a|
 * n1-standard-32
 * n2-standard-4
 * n2-standard-8
+* n2-standard-16
 * n2-standard-32
 a|
 * n2-standard-4
@@ -48,18 +49,21 @@ a|
 * n2-standard-8
 a|
 * n1-standard-32
+* n2-standard-16
 * n2-standard-32
 a|
 * n1-standard-8
 * n1-standard-32
 * n2-standard-4
 * n2-standard-8
+* n2-standard-16
 * n2-standard-32
 a|
 * n1-standard-8
 * n1-standard-32
 * n2-standard-4
 * n2-standard-8
+* n2-standard-16
 * n2-standard-32
 
 | Supported disk types ^4^ 6+| Zonal persistent disks (SSD, balanced, and standard)
