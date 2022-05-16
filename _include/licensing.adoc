@@ -33,11 +33,11 @@ Provides all Cloud Volumes ONTAP features free of charge from NetApp (cloud prov
 +
 Any other systems that have less than 500 GiB of provisioned capacity stay on Freemium (as long as they were deployed using the Freemium offering).
 
-To get started with the Freemium offering, create a new Cloud Volumes ONTAP working environment and select *Freemium* when prompted to choose a charging method.
+Learn how to get started with the Freemium offering:
 
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html[Launching Cloud Volumes ONTAP in AWS^]
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html[Launching Cloud Volumes ONTAP in Azure^]
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html[Launching Cloud Volumes ONTAP in Google Cloud^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-aws.html[Set up licensing for Cloud Volumes ONTAP in AWS^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-azure.html[Set up licensing for Cloud Volumes ONTAP in Azure^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-google.html[Set up licensing for Cloud Volumes ONTAP in Google Cloud^]
 
 == Capacity-based licensing packages
 
@@ -103,6 +103,9 @@ There are no instance or capacity limitations. You can deploy as many Cloud Volu
 
 There are no hourly software license charges for Cloud Volumes ONTAP, but infrastructure charges from your cloud provider still apply.
 
+TIP: You will receive a notification in Cloud Manager when the free trial starts, when there are 7 days left, and when there is 1 day remaining. For example:
+image:https://raw.githubusercontent.com/NetAppDocs/cloud-manager-cloud-volumes-ontap/main/media/screenshot-free-trial-notification.png[A screenshot of a notification in the Cloud Manager interface that states there is only 7 days remaining on a free trial.]
+
 === Supported configurations
 
 Capacity-based licensing packages are available with Cloud Volumes ONTAP 9.7 and later.
@@ -131,13 +134,11 @@ There is no maximum capacity limitation when it comes to the license itself.
 
 === How to get started
 
-. https://cloud.netapp.com/contact-cds[Contact NetApp Sales to obtain a license^].
-. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-capacity-licenses.html[Add your license to Cloud Manager^].
-. Select the capacity-based BYOL charging method when you create a Cloud Volumes ONTAP system.
-+
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html[Launching Cloud Volumes ONTAP in AWS^]
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html[Launching Cloud Volumes ONTAP in Azure^]
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html[Launching Cloud Volumes ONTAP in Google Cloud^]
+Learn how to get started with capacity-based licensing:
+
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-aws.html[Set up licensing for Cloud Volumes ONTAP in AWS^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-azure.html[Set up licensing for Cloud Volumes ONTAP in Azure^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-google.html[Set up licensing for Cloud Volumes ONTAP in Google Cloud^]
 
 == Keystone Flex Subscription
 
@@ -159,14 +160,11 @@ Each individual Cloud Volumes ONTAP system supports up to 2 PiB of capacity thro
 
 === How to get started
 
-. If you don't have a subscription yet, https://www.netapp.com/forms/keystone-sales-contact/[contact NetApp^].
-. mailto:ng-keystone-success@netapp.com[Contact NetApp] to authorize your Cloud Manager user account with one or more Keystone Flex Subscriptions.
-. After NetApp authorizes your account, https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-keystone.html#link-a-subscription[link your subscriptions for use with Cloud Volumes ONTAP^]
-. Select the Keystone Flex Subscription charging method when you create a Cloud Volumes ONTAP system.
-+
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-aws.html[Launching Cloud Volumes ONTAP in AWS^]
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html[Launching Cloud Volumes ONTAP in Azure^]
-* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html[Launching Cloud Volumes ONTAP in Google Cloud^]
+Learn how to get started with a Keystone Flex Subscription:
+
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-aws.html[Set up licensing for Cloud Volumes ONTAP in AWS^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-azure.html[Set up licensing for Cloud Volumes ONTAP in Azure^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-set-up-licensing-google.html[Set up licensing for Cloud Volumes ONTAP in Google Cloud^]
 
 == Node-based licensing
 
