@@ -36,7 +36,7 @@ Each license supports a different maximum system capacity. The maximum system ca
 | PAYGO Explore
 | PAYGO Standard
 | PAYGO Premium
-| Node-based license
+| Node-based BYOL
 | Capacity-based license
 
 | Maximum system capacity
@@ -61,7 +61,7 @@ Each license supports a different maximum system capacity. The maximum system ca
 
 === Supported disk sizes
 
-In AWS, an aggregate can contain up to 6 disks that are all the same type and size.
+In AWS, an aggregate can contain up to 6 disks that are all the same size. But if you have a configuration that supports the Amazon EBS Elastic Volumes feature, then an aggregate can contain up to 8 disks. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html[Learn more about support for Elastic Volumes^]
 
 [cols=3*,options="header"]
 |===
