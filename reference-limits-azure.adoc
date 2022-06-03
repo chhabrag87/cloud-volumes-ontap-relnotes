@@ -269,7 +269,7 @@ Storage VMs that you configure for disaster recovery (DR) don't require an add-o
 
 .2+| *Files*	| Maximum size | 16 TiB
 | Maximum per volume |	Volume size dependent, up to 2 billion
-| *FlexClone volumes*	| Hierarchical clone depth ^2^ | 499
+| *FlexClone volumes*	| Hierarchical clone depth ^1^ | 499
 .3+| *FlexVol volumes*	| Maximum per node |	500
 | Minimum size |	20 MB
 | Maximum size | 100 TiB
@@ -277,13 +277,6 @@ Storage VMs that you configure for disaster recovery (DR) don't require an add-o
 | *Snapshot copies* |	Maximum per FlexVol volume |	1,023
 
 |===
-
-Notes:
-
-. Cloud Manager does not provide any setup or orchestration support for SVM disaster recovery. It also does not support storage-related tasks on an additional SVM. You must use System Manager or the CLI for SVM disaster recovery.
-+
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839856[SVM Disaster Recovery Preparation Express Guide^]
-* https://library.netapp.com/ecm/ecm_get_file/ECMLP2839857[SVM Disaster Recovery Express Guide^]
 
 . Hierarchical clone depth is the maximum depth of a nested hierarchy of FlexClone volumes that can be created from a single FlexVol volume.
 

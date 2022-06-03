@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: reference-new.html
 keywords: what's new, new, features, release notes, enhancements
-summary: Cloud Volumes ONTAP 9.11.0 includes a new enhancement.
+summary: Cloud Volumes ONTAP 9.11.1 includes a new enhancement.
 ---
 
-= What's new in Cloud Volumes ONTAP 9.11.0
+= What's new in Cloud Volumes ONTAP 9.11.1
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,33 +13,41 @@ summary: Cloud Volumes ONTAP 9.11.0 includes a new enhancement.
 :imagesdir: ./media/
 
 [.lead]
-Cloud Volumes ONTAP 9.11.0 includes a new enhancement.
+Cloud Volumes ONTAP 9.11.1 includes new enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of Cloud Manager. See the https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html[Cloud Manager Release Notes^] for details.
 
-== Support for Elastic Volumes (6 June 2022)
+== 9.11.1 RC1 (8 June 2022)
 
-Support for the Amazon EBS Elastic Volumes feature with a Cloud Volumes ONTAP aggregate provides better performance and additional capacity, while enabling Cloud Manager to automatically increase the underlying disk capacity as needed.
+Cloud Volumes ONTAP 9.11.1 Release Candidate 1 is now available in AWS, Azure, and Google Cloud. This release includes the following new features and enhancements.
 
-Support for Elastic Volumes is available starting with the 3.9.19 release of the Cloud Manager Connector and is supported with specific Cloud Volumes ONTAP versions and specific EBS disk types.
+=== Performance enhancement
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html[Learn more about support for Elastic Volumes^]
+We have enhanced the read performance of new aggregates created in 9.11.1 or later.
 
-== 9.11.0 P1 (2 May 2022)
+=== Increased storage efficiency
 
-The Cloud Volumes ONTAP 9.11.0 P1 release is now available in AWS, Azure, and Google Cloud. This release includes the following enhancement.
+Starting with the 9.11.1 release, all new volumes enabled for storage efficiency will include a new compression feature called temperature-sensitive storage efficiency. The previous generation compression feature is no longer used.
 
-=== ONTAP S3 support in AWS
+Temperature-sensitive storage efficiency compresses data based on data temperature, or how often the data is used. Cold data, or data that is not used often, is recompressed with a higher compression ratio for increased storage efficiency.
 
-You can now provide S3 object storage from Cloud Volumes ONTAP in AWS (Microsoft Azure is already supported). Cloud Volumes ONTAP supports S3 as an option for scale-out storage, in addition to classic file-based protocols like NFS and SMB.
+=== Support for 24 storage VMs in Google Cloud
 
-Note the following:
+24 storage VMs are now supported with Cloud Volumes ONTAP in Google Cloud for most configurations.
 
-* The main use case for ONTAP S3 with Cloud Volumes ONTAP is a general purpose object store.
-* At this time, the S3 protocol is not supported with Cloud Volumes ONTAP in Google Cloud.
-* Cloud Manager doesn't provide any management capabilities for the ONTAP S3 feature.
+link:reference-limits-azure.html#storage-vm-limits[Learn more about storage VM limits in Google Cloud].
 
-https://docs.netapp.com/us-en/ontap/object-storage-management/index.html[Learn how to configure and manage S3 object storage services in ONTAP^].
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-gcp.html[Learn how to create data-serving storage VMs for Cloud Volumes ONTAP in Google Cloud^]
+
+=== VPC sharing in AWS
+
+Cloud Volumes ONTAP HA pairs are supported in AWS with VPC sharing. VPC sharing enables your organization to share subnets with other AWS accounts. Networking (the VPC, subnets, and route tables) reside in the VPC owner account, while the EC2 instances for the HA configuration reside in a participant account using shared subnets.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploy-aws-shared-vpc.html[Learn how to deploy an HA pair in a shared subnet^]
+
+== New unsupported ONTAP feature
+
+Multi-admin verification is not supported with Cloud Volumes ONTAP. Enabling multi-admin verification on Cloud Volumes ONTAP will result in an unsupported configuration.
 
 == Upgrade notes
 
@@ -53,11 +61,11 @@ http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ont
 
 === Supported upgrade path
 
-You can upgrade to Cloud Volumes ONTAP 9.11.0 from the 9.10.1 release. Cloud Manager will prompt you to upgrade eligible Cloud Volumes ONTAP systems to this release.
+You can upgrade to Cloud Volumes ONTAP 9.11.1 from the 9.11.0 release. Cloud Manager will prompt you to upgrade eligible Cloud Volumes ONTAP systems to this release.
 
 === Required version of the Connector
 
-The Cloud Manager Connector must be running version 3.9.18 or later to upgrade existing systems to 9.11.0.
+The Cloud Manager Connector must be running version 3.9.19 or later to deploy new Cloud Volumes ONTAP 9.11.1 systems and to upgrade existing systems to 9.11.1.
 
 TIP: Automatic upgrades of the Connector are enabled by default so you should be running the latest version.
 
