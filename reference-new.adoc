@@ -61,7 +61,7 @@ http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ont
 
 === Supported upgrade path
 
-You can upgrade to Cloud Volumes ONTAP 9.11.1 from the 9.11.0 release. Cloud Manager will prompt you to upgrade eligible Cloud Volumes ONTAP systems to this release.
+You can upgrade to Cloud Volumes ONTAP 9.11.1 from the 9.11.0 release and from the 9.10.1 release. Cloud Manager will prompt you to upgrade eligible Cloud Volumes ONTAP systems to this release.
 
 === Required version of the Connector
 
