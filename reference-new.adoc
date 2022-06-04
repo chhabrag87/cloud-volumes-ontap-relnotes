@@ -49,7 +49,7 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploy-aws-
 
 Starting with this release, if you create a new storage VM on a Cloud Volumes ONTAP HA pair in AWS or Azure, then you need to modify the network service policies for the storage VM. Modifying the services is required because it ensures that Cloud Volumes ONTAP can use the iSCSI LIF for outbound management connections.
 
-Note that this is not required for Cloud Volumes ONTAP in Google Cloud because the Cloud Manager API sets the LIF services for you during creation.
+Note that modifying LIF services is not required for Cloud Volumes ONTAP in Google Cloud because the Cloud Manager API sets the LIF services for you during creation.
 
 The commands that you need to run are specified on the following pages:
 
