@@ -45,6 +45,17 @@ Cloud Volumes ONTAP HA pairs are supported in AWS with VPC sharing. VPC sharing 
 
 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploy-aws-shared-vpc.html[Learn how to deploy an HA pair in a shared subnet^]
 
+=== Modifying LIF services for new storage VMs
+
+Starting with this release, if you create a new storage VM on a Cloud Volumes ONTAP HA pair in AWS or Azure, then you need to modify the network service policies for the storage VM. Modifying the services is required because it ensures that Cloud Volumes ONTAP can use the iSCSI LIF for outbound management connections.
+
+Note that this is not required for Cloud Volumes ONTAP in Google Cloud because the Cloud Manager API sets the LIF services for you during creation.
+
+The commands that you need to run are specified on the following pages:
+
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html[Learn how to create additional storage VMs in AWS^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-azure.html[Learn how to create additional storage VMs in Azure^]
+
 == New unsupported ONTAP feature
 
 Multi-admin verification is not supported with Cloud Volumes ONTAP. Enabling multi-admin verification on Cloud Volumes ONTAP will result in an unsupported configuration.
