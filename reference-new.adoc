@@ -35,7 +35,7 @@ Temperature-sensitive storage efficiency compresses data based on data temperatu
 
 24 storage VMs are now supported with Cloud Volumes ONTAP in Google Cloud for most configurations.
 
-* link:reference-limits-azure.html#storage-vm-limits[Learn more about storage VM limits in Google Cloud]
+* link:reference-limits-gcp.html#storage-vm-limits[Learn more about storage VM limits in Google Cloud]
 
 * https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-gcp.html[Learn how to create data-serving storage VMs for Cloud Volumes ONTAP in Google Cloud^]
 
