@@ -32,7 +32,7 @@ You can choose from the following configurations when deploying Cloud Volumes ON
 | PAYGO Explore
 | PAYGO Standard
 | PAYGO Premium
-| Node-based license
+| Node-based BYOL
 | Capacity-based license
 
 | Maximum system capacity
@@ -147,7 +147,7 @@ You can choose from the following configurations when deploying Cloud Volumes ON
 | Freemium
 | PAYGO Standard
 | PAYGO Premium
-| Node-based license
+| Node-based BYOL
 | Capacity-based license
 
 | Maximum system capacity

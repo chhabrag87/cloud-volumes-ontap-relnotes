@@ -39,5 +39,5 @@ https://www.netapp.com/us/legal/privacypolicy/index.aspx[^]
 
 Notice files provide information about third-party copyright and licenses used in NetApp software.
 
-* link:media/notice-aws.pdf[Notice for the Cloud Volumes ONTAP 9.11.0 mediator in AWS^]
-* link:media/notice-google-cloud.pdf[Notice for the Cloud Volumes ONTAP 9.11.0 mediator in Google Cloud^]
+* link:media/notice-aws.pdf[Notice for the Cloud Volumes ONTAP 9.11.1 mediator in AWS^]
+* link:media/notice-google-cloud.pdf[Notice for the Cloud Volumes ONTAP 9.11.1 mediator in Google Cloud^]

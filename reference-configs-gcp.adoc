@@ -28,7 +28,7 @@ Upgrading a single node system to an HA pair isn't supported. If you want to swi
 | PAYGO Explore
 | PAYGO Standard
 | PAYGO Premium
-| Node-based license
+| Node-based BYOL
 | Capacity-based license
 
 | Maximum system capacity

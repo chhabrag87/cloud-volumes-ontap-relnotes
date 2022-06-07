@@ -1,5 +1,5 @@
 settings:
-  name: Cloud Volumes ONTAP 9.11.0 release notes
+  name: Cloud Volumes ONTAP 9.11.1 release notes
   platform: cloud
   internal:
     pdf_enabled: true
@@ -9,6 +9,9 @@ settings:
   versions:
     - name: Cloud Volumes ONTAP
       url: /cloud-volumes-ontap-relnotes
+      version-number: "9.11.1"
+    - name: Cloud Volumes ONTAP
+      url: /cloud-volumes-ontap-9110-relnotes
       version-number: "9.11.0"
     - name: Cloud Volumes ONTAP
       url: /cloud-volumes-ontap-9101-relnotes
@@ -42,8 +45,6 @@ settings:
       version-number: "9.3"
 sidebar:
   entries:
-    - title: All Cloud Manager documentation
-      url: https://docs.netapp.com/us-en/cloud-manager-family
     - title: Release notes home
       url: /index.html
     - title: What's new
@@ -85,6 +86,7 @@ sidebar:
 product-family:
   name: Cloud Manager
   repo: cloud-manager-family
+  sidebar_label: All Cloud Manager documentation
 homepage:
   tiles:
     - title: Get started

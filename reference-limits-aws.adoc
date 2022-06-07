@@ -164,7 +164,7 @@ Note the following:
 
 == Aggregate limits
 
-Cloud Volumes ONTAP uses AWS volumes as disks and groups them into _aggregates_. Aggregates provide storage to volumes.
+Cloud Volumes ONTAP uses EBS volumes as disks and groups them into _aggregates_. Aggregates provide storage to volumes.
 
 [cols=2*,options="header,autowidth"]
 |===
@@ -174,8 +174,14 @@ Cloud Volumes ONTAP uses AWS volumes as disks and groups them into _aggregates_.
 | Maximum number of aggregates |
 Single node: Same as the disk limit
 HA pairs: 18 in a node ^1^
-| Maximum aggregate size | 96 TiB of raw capacity ^2^
-| Disks per aggregate	| 1-6 ^3^
+| Maximum aggregate size ^2^
+a|
+* 96 TiB of raw capacity
+* 128 TiB of raw capacity with Elastic Volumes ^3^
+| Disks per aggregate	^4^
+a|
+* 1-6
+* 1-8 with Elastic Volumes ^3^
 | Maximum number of RAID groups per aggregate	| 1
 |===
 
@@ -183,7 +189,9 @@ Notes:
 
 . It's not possible to create 18 aggregates on both nodes in an HA pair because doing so would exceed the data disk limit.
 
-. The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
+. The maximum aggregate size is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
+
+. If you have a configuration that supports the Amazon EBS Elastic Volumes feature, then an aggregate can contain up to 8 disks, which provides up to 128 TiB of capacity. The Amazon EBS Elastic Volumes feature is enabled by default on _new_ Cloud Volumes ONTAP 9.11.0 or later systems when using gp3 or io1 disks. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html[Learn more about support for Elastic Volumes^]
 
 . All disks in an aggregate must be the same size.
 
