@@ -31,6 +31,24 @@ Starting with the 9.11.1 release, all new volumes enabled for storage efficiency
 
 Temperature-sensitive storage efficiency compresses data based on data temperature, or how often the data is used. Cold data, or data that is not used often, is recompressed with a higher compression ratio for increased storage efficiency.
 
+=== VPC sharing in AWS
+
+Cloud Volumes ONTAP HA pairs are now supported in AWS with VPC sharing. VPC sharing enables your organization to share subnets with other AWS accounts. Networking (the VPC, subnets, and route tables) reside in the VPC owner account, while the EC2 instances for the HA configuration reside in a participant account using shared subnets.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploy-aws-shared-vpc.html[Learn how to deploy an HA pair in a shared subnet^]
+
+=== New AWS region support
+
+Cloud Volumes ONTAP is now supported in the AWS Jakarta region (ap-southeast-3).
+
+https://cloud.netapp.com/cloud-volumes-global-regions[View the full list of supported regions for Cloud Volumes ONTAP^]
+
+=== New Azure region support
+
+Cloud Volumes ONTAP is now supported in the Azure Brazil Southeast region.
+
+https://cloud.netapp.com/cloud-volumes-global-regions[View the full list of supported regions for Cloud Volumes ONTAP^]
+
 === Support for 24 storage VMs in Google Cloud
 
 24 storage VMs are now supported with Cloud Volumes ONTAP in Google Cloud for most configurations.
@@ -39,11 +57,11 @@ Temperature-sensitive storage efficiency compresses data based on data temperatu
 
 * https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-gcp.html[Learn how to create data-serving storage VMs for Cloud Volumes ONTAP in Google Cloud^]
 
-=== VPC sharing in AWS
+=== New Google Cloud region support
 
-Cloud Volumes ONTAP HA pairs are supported in AWS with VPC sharing. VPC sharing enables your organization to share subnets with other AWS accounts. Networking (the VPC, subnets, and route tables) reside in the VPC owner account, while the EC2 instances for the HA configuration reside in a participant account using shared subnets.
+Cloud Volumes ONTAP HA pairs are now supported in the Milan (europe-west8) region.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploy-aws-shared-vpc.html[Learn how to deploy an HA pair in a shared subnet^]
+https://cloud.netapp.com/cloud-volumes-global-regions[View the full list of supported regions for Cloud Volumes ONTAP^]
 
 === Modifying LIF services for new storage VMs
 
