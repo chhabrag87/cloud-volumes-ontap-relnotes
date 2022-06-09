@@ -130,7 +130,7 @@ The bandwidths shown in the table below match the documented AWS limits for each
 
 | m5.2xlarge | 8 | 32 | Not supported | Up to 10 | Up to 4,750 | Supported
 
-.19+| *Premium or any other license*
+.21+| *Premium or any other license*
 
 | m5n.2xlarge | 8 | 32 | Not supported | Up to 25 | Up to 4,750 | Supported
 
@@ -141,6 +141,8 @@ The bandwidths shown in the table below match the documented AWS limits for each
 | c5d.4xlarge | 16 | 32 | Supported | Up to 10 | 4,570 | Supported
 
 | m5.4xlarge | 16 | 64 | Not supported | Up to 10 | 4,750 | Supported
+
+| m5dn.4xlarge | 16 | 64 | Supported | Up to 25 | 4,750 | Supported
 
 | m5d.8xlarge | 32 | 128 | Supported | 10 | 6,800 | Supported
 
@@ -159,6 +161,8 @@ The bandwidths shown in the table below match the documented AWS limits for each
 | c5d.18xlarge | 48 ^4^ | 144 | Supported | 25 | 19,000 | Supported
 
 | m5d.12xlarge | 48 | 192 | Supported | 12 | 9,500 | Supported
+
+| m5dn.12xlarge | 48 | 192 | Supported | 50 | 9,500 | Supported
 
 | c5n.18xlarge | 48 ^4^ | 192 | Not supported | 100 | 19,000 | Supported
 
