@@ -37,11 +37,11 @@ For some configurations, disk limits prevent you from reaching the capacity limi
 
 |===
 
-===== For HA, is the license capacity limit per node or for the entire HA pair?
+.For HA, is the license capacity limit per node or for the entire HA pair?
 
 The capacity limit is for the entire HA pair. It is not per node. For example, if you use the Premium license, you can have up to 368 TiB of capacity between both nodes.
 
-===== For an HA system in AWS, does mirrored data count against the capacity limit?
+.For an HA system in AWS, does mirrored data count against the capacity limit?
 
 No, it doesn't. Data in an AWS HA pair is synchronously mirrored between the nodes so that the data is available in the event of failure. For example, if you purchase an 8 TiB disk on node A, Cloud Manager also allocates an 8 TiB disk on node B that is used for mirrored data. While 16 TiB of capacity was provisioned, only 8 TiB counts against the license limit.
 
