@@ -51,7 +51,7 @@ Cloud Volumes ONTAP uses EBS volumes as disks, with a maximum disk size of 16 Ti
 
 Note the following:
 
-* c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP 9.10.0 systems. However, we're still showing disk limits for these instance types because you can upgrade a system to the 9.10.0 release when running on one of these instance types.
+* c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP systems in this release. However, we're still showing disk limits for these instance types because you can upgrade a system to this release when running on one of these instance types.
 
 * The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.
 
