@@ -74,6 +74,16 @@ The commands that you need to run are specified on the following pages:
 * https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html[Learn how to create additional storage VMs in AWS^]
 * https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-azure.html[Learn how to create additional storage VMs in Azure^]
 
+=== Anti-ransomware
+
+The ONTAP anti-ransomware feature is now supported with Cloud Volumes ONTAP. This feature uses workload analysis in NAS (NFS and SMB) environments to proactively detect and warn about abnormal activity that might indicate a ransomware attack.
+
+https://docs.netapp.com/us-en/ontap/anti-ransomware/index.html[Learn more about anti-ransomware^]
+
+Note that Cloud Manager doesn't provide any management for this feature. You'll need to use System Manager or the CLI to enable anti-ransomware protection.
+
+Anti-ransomware addresses a separate use case from https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-protecting-ransomware.html[the ransomware protection that you can enable through Cloud Manager^]
+
 == New unsupported ONTAP feature
 
 The new multi-admin verification feature introduced in ONTAP 9.11.1 is not supported with Cloud Volumes ONTAP. Enabling multi-admin verification on Cloud Volumes ONTAP will result in an unsupported configuration.
