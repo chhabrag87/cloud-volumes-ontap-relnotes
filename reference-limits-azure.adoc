@@ -39,6 +39,32 @@ NetApp doesn't support exceeding the system capacity limit. If you reach the lic
 
 The capacity limit is for the entire HA pair. It is not per node. For example, if you use the Premium license, you can have up to 368 TiB of capacity between both nodes.
 
+== Aggregate limits
+
+Cloud Volumes ONTAP uses Azure storage as disks and groups them into _aggregates_. Aggregates provide storage to volumes.
+
+[cols=2*,options="header,autowidth"]
+|===
+| Parameter
+| Limit
+
+| Maximum number of aggregates | Same as the disk limit
+| Maximum aggregate size ^1^ |
+384 TiB of raw capacity for single node ^2^
+352 TiB of raw capacity for single node with PAYGO
+96 TiB of raw capacity for HA pairs
+| Disks per aggregate	| 1-12 ^3^
+| Maximum number of RAID groups per aggregate	| 1
+|===
+
+Notes:
+
+. The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
+
+. If using node-based licensing, two BYOL licenses are required to reach 384 TiB.
+
+. All disks in an aggregate must be the same size.
+
 == Disk and tiering limits by VM size
 
 Capacity limits are different depending on the VM size that you use and whether you're using a single node system or an HA pair.
@@ -119,7 +145,7 @@ If you use node-based licensing, you can purchase multiple node-based licenses f
 
 The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
 
-==== Single node with a PAYGO Premium
+==== Single node with PAYGO Premium
 
 [cols="14,20,31,33",width=68%,options="header"]
 |===
@@ -170,7 +196,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | E80ids_v4 | 61 | 368 TiB | 368 TiB | 896 TiB | 368 TiB x each license
 |===
 
-==== HA pair with a PAYGO Premium
+==== HA pairs with PAYGO Premium
 
 [cols="14,20,31,33",width=68%,options="header"]
 |===
@@ -189,7 +215,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | E80ids_v4 | 61 | 368 TiB | 368 TiB
 |===
 
-==== HA pair with BYOL
+==== HA pairs with BYOL
 
 [cols="10,18,18,18,18,18",width=100%,options="header"]
 |===
@@ -212,32 +238,6 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 | E48ds_v4 | 29 | 232 TiB | 368 TiB | 232 TiB | 368 TiB x each license
 | E80ids_v4 | 61 | 368 TiB | 368 TiB | 488 TiB | 368 TiB x each license
 |===
-
-== Aggregate limits
-
-Cloud Volumes ONTAP uses Azure storage as disks and groups them into _aggregates_. Aggregates provide storage to volumes.
-
-[cols=2*,options="header,autowidth"]
-|===
-| Parameter
-| Limit
-
-| Maximum number of aggregates | Same as the disk limit
-| Maximum aggregate size ^1^ |
-384 TiB of raw capacity for single node ^2^
-352 TiB of raw capacity for single node with PAYGO
-96 TiB of raw capacity for HA pairs
-| Disks per aggregate	| 1-12 ^3^
-| Maximum number of RAID groups per aggregate	| 1
-|===
-
-Notes:
-
-. The aggregate capacity limit is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.
-
-. If using node-based licensing, two BYOL licenses are required to reach 384 TiB.
-
-. All disks in an aggregate must be the same size.
 
 == Storage VM limits
 
