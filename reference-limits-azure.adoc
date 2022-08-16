@@ -85,9 +85,7 @@ The limits do not include the root disk, core disk, and VNVRAM.
 
 === Limits for capacity-based licensing
 
-The following disk limits apply to Cloud Volumes ONTAP systems that use a capacity-based licensing package.
-
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html[Learn about Cloud Volumes ONTAP licensing options^]
+The following disk limits apply to Cloud Volumes ONTAP systems that use a capacity-based licensing package. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html[Learn about Cloud Volumes ONTAP licensing options^]
 
 ==== Single node
 
@@ -168,8 +166,6 @@ The number of licenses that you can purchase for a single node system or HA pair
 |===
 
 ==== Single node with BYOL
-
-NOTE: For some VM types, you'll need several BYOL licenses to reach the max system capacity listed below. For example, you'd need 6 BYOL licenses to reach 1.95 PiB with DS5_v2.
 
 [cols="10,18,18,18,18,18",width=100%,options="header"]
 |===

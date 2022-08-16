@@ -94,9 +94,7 @@ The limits do not include the boot disk and root disk.
 
 === Limits for capacity-based licensing
 
-The following disk limits apply to Cloud Volumes ONTAP systems that use a capacity-based licensing package.
-
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html[Learn about Cloud Volumes ONTAP licensing options^]
+The following disk limits apply to Cloud Volumes ONTAP systems that use a capacity-based licensing package. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html[Learn about Cloud Volumes ONTAP licensing options^]
 
 ==== Single node
 
