@@ -113,7 +113,7 @@ NOTE: For some VM types, you'll need several BYOL licenses to reach the max syst
 
 | DS4_v2 | 29 | 896 TiB | 2 PiB
 | DS5_v2 | 61 | 896 TiB | 2 PiB
-| DS13_v2 | 29 | 928 TiB | 2 PiB
+| DS13_v2 | 29 | 896 TiB | 2 PiB
 | DS14_v2 | 61 | 896 TiB | 2 PiB
 | DS15_v2 | 61 | 896 TiB | 2 PiB
 | L8s_v2 | 13 | 416 TiB | 2 PiB
