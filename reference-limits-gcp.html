@@ -685,7 +685,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-13 15:44:49 +0000">06/13/2022</time>
+    <time datetime="2022-08-16 19:08:00 +0000">08/16/2022</time>
     
   
 
@@ -771,56 +771,6 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="disk-and-tiering-limits">Disk and tiering limits</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The table below shows the maximum system capacity with disks alone, and with disks and cold data tiering to object storage. The disk limits are specific to disks that contain user data. The limits do not include the boot disk and root disk.</p>
-</div>
-<table class="tableblock frame-all grid-all" style="width: 70%;">
-<colgroup>
-<col style="width: 60%;">
-<col style="width: 40%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Parameter</th>
-<th class="tableblock halign-left valign-top">Limit</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum data disks</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>124 for single node systems</p>
-</li>
-<li>
-<p>123 per node for HA pairs</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum disk size</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">64 TB</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum system capacity with disks alone</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">256 TB <sup>1</sup></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum system capacity with disks and cold data tiering to a Google Cloud Storage bucket</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Depends on the license. See the table above.</p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p><sup>1</sup> This limit is defined by virtual machine limits in Google Cloud Platform.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="aggregate-limits">Aggregate limits</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -880,6 +830,56 @@
 <p>All disks in an aggregate must be the same size.</p>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="disk-and-tiering-limits">Disk and tiering limits</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The table below shows the maximum system capacity with disks alone, and with disks and cold data tiering to object storage. The disk limits are specific to disks that contain user data. The limits do not include the boot disk, root disk, or NVRAM.</p>
+</div>
+<table class="tableblock frame-all grid-all" style="width: 70%;">
+<colgroup>
+<col style="width: 60%;">
+<col style="width: 40%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parameter</th>
+<th class="tableblock halign-left valign-top">Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum data disks</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>124 for single node systems</p>
+</li>
+<li>
+<p>123 per node for HA pairs</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum disk size</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64 TB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum system capacity with disks alone</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256 TB <sup>1</sup></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maximum system capacity with disks and cold data tiering to a Google Cloud Storage bucket</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Depends on the license. Refer to the maximum system capacity limits above.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><sup>1</sup> This limit is defined by virtual machine limits in Google Cloud Platform.</p>
 </div>
 </div>
 </div>

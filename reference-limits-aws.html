@@ -685,7 +685,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-06-14 19:54:02 +0000">06/14/2022</time>
+    <time datetime="2022-08-16 19:15:42 +0000">08/16/2022</time>
     
   
 
@@ -771,336 +771,6 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="disk-and-tiering-limits-by-ec2-instance">Disk and tiering limits by EC2 instance</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Cloud Volumes ONTAP uses EBS volumes as disks, with a maximum disk size of 16 TiB. The sections below show disk and tiering limits by EC2 instance family because many EC2 instance types have different disk limits. Disk limits are also different between single node systems and HA pairs.</p>
-</div>
-<div class="paragraph">
-<p>Note the following:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP systems in this release. However, we&#8217;re still showing disk limits for these instance types because you can upgrade a system to this release when running on one of these instance types.</p>
-</li>
-<li>
-<p>The disk limits below are specific to disks that contain user data. The limits do not include the boot disk and root disk.</p>
-</li>
-<li>
-<p>You can now purchase multiple node-based licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TiB of capacity. The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">tiering inactive data to object storage</a>. <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html" target="_blank" rel="noopener">Learn how to add additional system licenses to Cloud Volumes ONTAP</a>.</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="single-node-with-a-premium-license">Single node with a Premium license</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 18%;">
-<col style="width: 18%;">
-<col style="width: 32%;">
-<col style="width: 32%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Instance</th>
-<th class="tableblock halign-left valign-top">Max disks per node</th>
-<th class="tableblock halign-left valign-top">Max system capacity with disks alone</th>
-<th class="tableblock halign-left valign-top">Max system capacity with disks and data tiering</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">21 <sup>1</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">336 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">19 <sup>2</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-</tr>
-</tbody>
-</table>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>21 data disks is the limit for <em>new</em> deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 22 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.</p>
-</li>
-<li>
-<p>This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="single-node-with-node-based-licensing">Single node with node-based licensing</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 18%;">
-<col style="width: 18%;">
-<col style="width: 16%;">
-<col style="width: 16%;">
-<col style="width: 16%;">
-<col style="width: 16%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Instance</th>
-<th class="tableblock halign-left valign-top">Max disks per node</th>
-<th class="tableblock halign-left valign-top" colspan="2">Max system capacity with one license</th>
-<th class="tableblock halign-left valign-top" colspan="2">Max system capacity with multiple licenses</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks alone</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks + data tiering</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks alone</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks + data tiering</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">21 <sup>1</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">336 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">336 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">19 <sup>2</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">544 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
-</tr>
-</tbody>
-</table>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>21 data disks is the limit for <em>new</em> deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 22 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.</p>
-</li>
-<li>
-<p>This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="single-node-with-capacity-based-licensing">Single node with capacity-based licensing</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 18%;">
-<col style="width: 18%;">
-<col style="width: 32%;">
-<col style="width: 32%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Instance</th>
-<th class="tableblock halign-left valign-top">Max disks per node</th>
-<th class="tableblock halign-left valign-top">Max system capacity with disks alone</th>
-<th class="tableblock halign-left valign-top">Max system capacity with disks and data tiering</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">336 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">19 <sup>1</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
-</tr>
-</tbody>
-</table>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ha-pairs-with-a-premium-license">HA pairs with a Premium license</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 18%;">
-<col style="width: 18%;">
-<col style="width: 32%;">
-<col style="width: 32%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Instance</th>
-<th class="tableblock halign-left valign-top">Max disks per node</th>
-<th class="tableblock halign-left valign-top">Max system capacity with disks alone</th>
-<th class="tableblock halign-left valign-top">Max system capacity with disks and data tiering</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">18 <sup>1</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">288 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">16 <sup>2</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">256 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-</tr>
-</tbody>
-</table>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>18 data disks is the limit for <em>new</em> deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 19 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.</p>
-</li>
-<li>
-<p>This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ha-pairs-with-node-based-licensing">HA pairs with node-based licensing</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 18%;">
-<col style="width: 18%;">
-<col style="width: 16%;">
-<col style="width: 16%;">
-<col style="width: 16%;">
-<col style="width: 16%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Instance</th>
-<th class="tableblock halign-left valign-top">Max disks per node</th>
-<th class="tableblock halign-left valign-top" colspan="2">Max system capacity with one license</th>
-<th class="tableblock halign-left valign-top" colspan="2">Max system capacity with multiple licenses</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks alone</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks + data tiering</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks alone</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks + data tiering</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">18 <sup>1</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">288 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">288 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">16 <sup>2</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">256 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">256 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">496 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
-</tr>
-</tbody>
-</table>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>18 data disks is the limit for <em>new</em> deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 19 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.</p>
-</li>
-<li>
-<p>This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="ha-pairs-with-capacity-based-licensing">HA pairs with capacity-based licensing</h3>
-<table class="tableblock frame-all grid-all stretch">
-<colgroup>
-<col style="width: 18%;">
-<col style="width: 18%;">
-<col style="width: 32%;">
-<col style="width: 32%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Instance</th>
-<th class="tableblock halign-left valign-top">Max disks per node</th>
-<th class="tableblock halign-left valign-top">Max system capacity with disks alone</th>
-<th class="tableblock halign-left valign-top">Max system capacity with disks and data tiering</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">288 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">16 <sup>1</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">256 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
-</tr>
-</tbody>
-</table>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.</p>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="aggregate-limits">Aggregate limits</h2>
 <div class="sectionbody">
 <div class="paragraph">
@@ -1173,6 +843,367 @@ HA pairs: 18 in a node <sup>1</sup></p></td>
 <p>All disks in an aggregate must be the same size.</p>
 </li>
 </ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="disk-and-tiering-limits-by-ec2-instance">Disk and tiering limits by EC2 instance</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Capacity limits are different depending on the EC2 instance type family that you use and whether you&#8217;re using a single node system or an HA pair.</p>
+</div>
+<div class="paragraph">
+<p>The following notes provide details about the numbers that you’ll see in the tables below:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The disk limits are specific to disks that contain user data.</p>
+<div class="paragraph">
+<p>The limits do not include the boot disk and root disk.</p>
+</div>
+</li>
+<li>
+<p>A maximum system capacity is listed when using disks alone and when using disks and cold data tiering to object storage.</p>
+</li>
+<li>
+<p>Cloud Volumes ONTAP uses EBS volumes as disks, with a maximum disk size of 16 TiB.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="limits-for-capacity-based-licensing">Limits for capacity-based licensing</h3>
+<div class="paragraph">
+<p>The following disk limits apply to Cloud Volumes ONTAP systems that use a capacity-based licensing package. <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html" target="_blank" rel="noopener">Learn about Cloud Volumes ONTAP licensing options</a></p>
+</div>
+<div class="sect3">
+<h4 id="single-node">Single node</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 32%;">
+<col style="width: 32%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Instance</th>
+<th class="tableblock halign-left valign-top">Max disks per node</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks alone</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks and data tiering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5 instances</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">336 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19 <sup>1</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ha-pairs">HA pairs</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 32%;">
+<col style="width: 32%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Instance</th>
+<th class="tableblock halign-left valign-top">Max disks per node</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks alone</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks and data tiering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5 instances</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">288 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 <sup>1</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="limits-for-node-based-licensing">Limits for node-based licensing</h3>
+<div class="paragraph">
+<p>The following disk limits apply to Cloud Volumes ONTAP systems that use node-based licensing, which is the previous generation licensing model that enabled you to license Cloud Volumes ONTAP by node. Node-based licensing is still available for existing customers.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If you use node-based licensing, you can purchase multiple node-based licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TiB of capacity.</p>
+<div class="paragraph">
+<p>The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">tiering inactive data to object storage</a>. <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html" target="_blank" rel="noopener">Learn how to add additional system licenses to Cloud Volumes ONTAP</a>.</p>
+</div>
+</li>
+<li>
+<p>c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP systems in this release.</p>
+<div class="paragraph">
+<p>However, we&#8217;re still showing disk limits for these instance types because you can upgrade a system to this release when running on one of these instance types.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="single-node-with-paygo-premium">Single node with PAYGO Premium</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 32%;">
+<col style="width: 32%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Instance</th>
+<th class="tableblock halign-left valign-top">Max disks per node</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks alone</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks and data tiering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5 instances</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21 <sup>1</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">336 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19 <sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4 instances</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>21 data disks is the limit for <em>new</em> deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 22 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.</p>
+</li>
+<li>
+<p>This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="single-node-with-byol">Single node with BYOL</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Instance</th>
+<th class="tableblock halign-left valign-top">Max disks per node</th>
+<th class="tableblock halign-left valign-top" colspan="2">Max system capacity with one license</th>
+<th class="tableblock halign-left valign-top" colspan="2">Max system capacity with multiple licenses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks alone</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks + data tiering</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks alone</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks + data tiering</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5 instances</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21 <sup>1</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">336 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">336 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19 <sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4 instances</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">544 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>21 data disks is the limit for <em>new</em> deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 22 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.</p>
+</li>
+<li>
+<p>This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ha-pairs-with-paygo-premium">HA pairs with PAYGO Premium</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 32%;">
+<col style="width: 32%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Instance</th>
+<th class="tableblock halign-left valign-top">Max disks per node</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks alone</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks and data tiering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5 instances</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18 <sup>1</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">288 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 <sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4 instances</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>18 data disks is the limit for <em>new</em> deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 19 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.</p>
+</li>
+<li>
+<p>This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ha-pairs-with-byol">HA pairs with BYOL</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+<col style="width: 16%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Instance</th>
+<th class="tableblock halign-left valign-top">Max disks per node</th>
+<th class="tableblock halign-left valign-top" colspan="2">Max system capacity with one license</th>
+<th class="tableblock halign-left valign-top" colspan="2">Max system capacity with multiple licenses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks alone</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks + data tiering</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks alone</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks + data tiering</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5 instances</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18 <sup>1</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">288 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">288 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16 <sup>2</sup></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">256 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4 instances</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">496 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
+</tr>
+</tbody>
+</table>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>18 data disks is the limit for <em>new</em> deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 19 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.</p>
+</li>
+<li>
+<p>This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.</p>
+</li>
+</ol>
+</div>
+</div>
 </div>
 </div>
 </div>
