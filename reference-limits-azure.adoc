@@ -87,6 +87,8 @@ The limits do not include the root disk, core disk, and VNVRAM.
 
 The following disk limits apply to Cloud Volumes ONTAP systems that use a capacity-based licensing package.
 
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html[Learn about Cloud Volumes ONTAP licensing options^]
+
 ==== Single node
 
 [cols="14,20,31,33",width=68%,options="header"]

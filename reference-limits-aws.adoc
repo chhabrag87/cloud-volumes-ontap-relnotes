@@ -92,13 +92,11 @@ The limits do not include the boot disk and root disk.
 
 * Cloud Volumes ONTAP uses EBS volumes as disks, with a maximum disk size of 16 TiB.
 
-* c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP systems in this release.
-+
-However, we're still showing disk limits for these instance types because you can upgrade a system to this release when running on one of these instance types.
-
 === Limits for capacity-based licensing
 
 The following disk limits apply to Cloud Volumes ONTAP systems that use a capacity-based licensing package.
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html[Learn about Cloud Volumes ONTAP licensing options^]
 
 ==== Single node
 
@@ -134,9 +132,13 @@ The following disk limits apply to Cloud Volumes ONTAP systems that use a capaci
 
 The following disk limits apply to Cloud Volumes ONTAP systems that use node-based licensing, which is the previous generation licensing model that enabled you to license Cloud Volumes ONTAP by node. Node-based licensing is still available for existing customers.
 
-If you use node-based licensing, you can purchase multiple node-based licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TiB of capacity.
-
+* If you use node-based licensing, you can purchase multiple node-based licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TiB of capacity.
++
 The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
+
+* c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP systems in this release.
++
+However, we're still showing disk limits for these instance types because you can upgrade a system to this release when running on one of these instance types.
 
 ==== Single node with PAYGO Premium
 

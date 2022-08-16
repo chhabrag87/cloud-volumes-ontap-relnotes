@@ -72,7 +72,7 @@ Notes:
 
 == Disk and tiering limits
 
-The table below shows the maximum system capacity with disks alone, and with disks and cold data tiering to object storage. The disk limits are specific to disks that contain user data. The limits do not include the boot disk and root disk.
+The table below shows the maximum system capacity with disks alone, and with disks and cold data tiering to object storage. The disk limits are specific to disks that contain user data. The limits do not include the boot disk, root disk, or NVRAM.
 
 [cols="60,40",width=70%,options="header"]
 |===
