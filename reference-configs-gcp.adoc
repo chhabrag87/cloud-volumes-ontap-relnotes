@@ -84,7 +84,7 @@ If you have an existing system running on this machine type, you can keep using 
 
 . Enhanced write performance is enabled when using SSDs.
 
-. The Cloud Manager interface shows an additional supported machine type for Standard and BYOL: n1-highmem-4. However, this machine type isn't meant for production environments. We've made it available for a specific lab environment only.
+. The BlueXP interface shows an additional supported machine type for Standard and BYOL: n1-highmem-4. However, this machine type isn't meant for production environments. We've made it available for a specific lab environment only.
 
 . For Google Cloud Platform region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
