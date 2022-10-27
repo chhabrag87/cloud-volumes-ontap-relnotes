@@ -803,7 +803,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-10-20 15:37:46 +0000">10/20/2022</time>
+    <time datetime="2022-10-27 19:08:30 +0000">10/27/2022</time>
     
   
 
@@ -840,13 +840,27 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="c4-m4-and-r4-instances-no-longer-supported-28-october-2022">c4, m4, and r4 instances no longer supported (28 October 2022)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In AWS, the c4, m4, and r4 EC2 instance types are no longer supported with Cloud Volumes ONTAP. If you have an existing system that’s running on a c4, m4, or r4 instance type, you must change to an instance type in the c5, m5, or r5 instance family.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html" target="_blank" rel="noopener">Learn how to change the EC2 instance type for Cloud Volumes ONTAP</a>.</p>
+</div>
+<div class="paragraph">
+<p>Refer to <a href="https://mysupport.netapp.com/info/communications/ECMLP2880231.html" target="_blank" rel="noopener">NetApp Support</a> to learn more about the end of availability and support for these instance types.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="9-11-1-p3-19-october-2022">9.11.1 P3 (19 October 2022)</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The 9.11.1 P3 patch is now available for Cloud Volumes ONTAP for all cloud providers if you have a Connector running version 3.9.22 or later. Cloud Manager will prompt you to upgrade your existing systems to this patch release.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.11.1P3">View the list of bugs fixed in the P3 patch</a> (NetApp Support Site login required).</p>
+<p><a href="https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.11.1P3" target="_blank" rel="noopener">View the list of bugs fixed in the P3 patch</a> (NetApp Support Site login required).</p>
 </div>
 </div>
 </div>
@@ -1013,15 +1027,6 @@ Automatic upgrades of the Connector are enabled by default so you should be runn
 <p>Upgrading an HA pair is nondisruptive and I/O is uninterrupted. During this nondisruptive upgrade process, each node is upgraded in tandem to continue serving I/O to clients.</p>
 </li>
 </ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="c4-m4-and-r4-instance-types">c4, m4, and r4 instance types</h3>
-<div class="paragraph">
-<p>Starting with the 9.8 release, c4, m4, and r4 instance types aren&#8217;t supported with new Cloud Volumes ONTAP systems. If you have an existing Cloud Volumes ONTAP system that&#8217;s running on a c4, m4, or r4 instance type, you can still upgrade to this release.</p>
-</div>
-<div class="paragraph">
-<p>We recommend changing to an instance type in the c5, m5, or r5 instance family.</p>
 </div>
 </div>
 </div>

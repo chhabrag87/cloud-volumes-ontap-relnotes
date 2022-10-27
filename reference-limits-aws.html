@@ -803,7 +803,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-08-16 19:15:42 +0000">08/16/2022</time>
+    <time datetime="2022-10-27 19:08:30 +0000">10/27/2022</time>
     
   
 
@@ -813,6 +813,14 @@
           alt="netapp-bcammett"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/18287750?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-rlithman">
+    <img  class="avatar avatar-small"
+          alt="netapp-rlithman"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/54725121?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1088,12 +1096,6 @@ HA pairs: 18 in a node <sup>1</sup></p></td>
 <p>The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">tiering inactive data to object storage</a>. <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html" target="_blank" rel="noopener">Learn how to add additional system licenses to Cloud Volumes ONTAP</a>.</p>
 </div>
 </li>
-<li>
-<p>c4, m4, and r4 instance types are not supported with new Cloud Volumes ONTAP systems in this release.</p>
-<div class="paragraph">
-<p>However, we&#8217;re still showing disk limits for these instance types because you can upgrade a system to this release when running on one of these instance types.</p>
-</div>
-</li>
 </ul>
 </div>
 <div class="sect3">
@@ -1124,12 +1126,6 @@ HA pairs: 18 in a node <sup>1</sup></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">19 <sup>2</sup></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
 </tr>
 </tbody>
@@ -1188,14 +1184,6 @@ HA pairs: 18 in a node <sup>1</sup></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">304 TiB</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">544 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
-</tr>
 </tbody>
 </table>
 <div class="olist arabic">
@@ -1237,12 +1225,6 @@ HA pairs: 18 in a node <sup>1</sup></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">m5dn.24xlarge</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">16 <sup>2</sup></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">256 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
 </tr>
 </tbody>
@@ -1301,14 +1283,6 @@ HA pairs: 18 in a node <sup>1</sup></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">256 TiB</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4 instances</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">496 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
-</tr>
 </tbody>
 </table>
 <div class="olist arabic">
@@ -1336,43 +1310,30 @@ HA pairs: 18 in a node <sup>1</sup></p></td>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 26%;">
-<col style="width: 26%;">
-<col style="width: 48%;">
+<col style="width: 40%;">
+<col style="width: 60%;">
 </colgroup>
 <thead>
 <tr>
 <th class="tableblock halign-left valign-top">License type</th>
-<th class="tableblock halign-left valign-top">Instance family</th>
 <th class="tableblock halign-left valign-top">Storage VM limit</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Freemium</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>24 storage VMs total <sup>1,2</sup></p>
-</li>
-</ul>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Capacity-based PAYGO or BYOL</strong> <sup>3</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
 <p>24 storage VMs total <sup>1,2</sup></p>
-</li>
-</ul>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><strong>Node-based PAYGO</strong></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Node-based PAYGO</strong></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
@@ -1385,34 +1346,7 @@ HA pairs: 18 in a node <sup>1</sup></p></td>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>1 storage VM for serving data</p>
-</li>
-<li>
-<p>1 storage VM for disaster recovery</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" rowspan="2"><p class="tableblock"><strong>Node-based BYOL</strong> <sup>4</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c4, m4, and r4</p></td>
-<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
-<ul>
-<li>
-<p>1 storage VM for serving data</p>
-</li>
-<li>
-<p>1 storage VM for disaster recovery</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">c5, m5, and r5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Node-based BYOL</strong> <sup>4</sup></p></td>
 <td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
 <ul>
 <li>
