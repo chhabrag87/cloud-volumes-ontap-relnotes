@@ -131,7 +131,7 @@ If you choose any of these VM types when you deploy a new Cloud Volumes ONTAP sy
 +
 Conversely, if you deployed Cloud Volumes ONTAP using any other VM type, you won't be able to change to a VM type that uses an Ultra SSD for VNVRAM. For example, you can't change from E8s_v3 to E8ds_v4.
 
-. High write speed is supported with all instance types when using a single node system. You can enable high write speed from Cloud Manager during deployment or any time after. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html[Learn more about choosing a write speed^].
+. High write speed is supported with all instance types when using a single node system. You can enable high write speed from BlueXP during deployment or any time after. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html[Learn more about choosing a write speed^].
 
 . Enhanced write performance is enabled when using SSDs.
 
@@ -217,7 +217,7 @@ a|
 
 Notes:
 
-. Cloud Volumes ONTAP supports high write speed with these VM types when using an HA pair. You can enable high write speed from Cloud Manager during deployment or any time after. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html[Learn more about choosing a write speed^].
+. Cloud Volumes ONTAP supports high write speed with these VM types when using an HA pair. You can enable high write speed from BlueXP during deployment or any time after. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html[Learn more about choosing a write speed^].
 
 . This VM is recommended only when Azure maintenance control is needed. It's not recommended for any other use case due to the higher pricing.
 
