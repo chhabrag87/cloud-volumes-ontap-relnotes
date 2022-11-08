@@ -136,7 +136,7 @@ The following disk limits apply to Cloud Volumes ONTAP systems that use a capaci
 | E80ids_v4 | 61 | 488 TiB | 2 PiB
 |===
 
-==== HA pairs with ZRS
+==== HA pairs in multiple availability zones
 
 [cols="14,20,31,33",width=68%,options="header"]
 |===
