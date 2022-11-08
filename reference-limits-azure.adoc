@@ -79,7 +79,7 @@ The limits do not include the root disk, core disk, and VNVRAM.
 
 * Single node and HA systems which use managed disks have a maximum of 32 TiB per disk. The number of supported disks varies by VM size.
 
-* HA systems which use page blobs as disks have a maximum of 8 TiB per page blob. The number of supported disks varies by VM size.
+* HA systems which use page blobs have a maximum of 8 TiB per page blob. The number of supported disks varies by VM size.
 
 * The 896 TiB disk-based limit that's listed for single node systems with certain VM sizes is the _tested_ limit.
 
@@ -135,7 +135,6 @@ The following disk limits apply to Cloud Volumes ONTAP systems that use a capaci
 | E48ds_v4 | 29 | 232 TiB | 2 PiB
 | E80ids_v4 | 61 | 488 TiB | 2 PiB
 |===
-NOTE: 
 
 ==== HA pairs with ZRS
 
@@ -149,7 +148,7 @@ NOTE:
 | E8ds_v4 | 12 | 384 TiB | 2 PiB
 | E32ds_v4 | 28 | 896 TiB | 2 PiB
 | E48ds_v4 | 28 | 896 TiB | 2 PiB
-| E80ids_v4 | 60 | 1.9 PiB | 2 PiB
+| E80ids_v4 | 60 | 896 PiB | 2 PiB
 |===
 
 === Limits for node-based licensing
