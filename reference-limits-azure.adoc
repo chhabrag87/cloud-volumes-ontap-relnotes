@@ -159,8 +159,11 @@ If you use node-based licensing, you can purchase multiple node-based licenses f
 
 The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
 
-==== Single node with PAYGO Premium
+==== Single node 
 
+.Single node with PAYGO Premium
+[%collapsible]
+====
 [cols="14,20,31,33",width=68%,options="header"]
 |===
 | VM size
@@ -178,9 +181,11 @@ The number of licenses that you can purchase for a single node system or HA pair
 | E48ds_v4 | 29 | 368 TiB | 368 TiB
 | E80ids_v4 | 61 | 368 TiB | 368 TiB
 |===
+====
 
-==== Single node with BYOL
-
+.Single node with BYOL
+[%collapsible]
+====
 [cols="10,18,18,18,18,18",width=100%,options="header"]
 |===
 | VM size
@@ -207,6 +212,7 @@ The number of licenses that you can purchase for a single node system or HA pair
 | E48ds_v4 | 29 | 368 TiB | 368 TiB | 896 TiB | 368 TiB x each license
 | E80ids_v4 | 61 | 368 TiB | 368 TiB | 896 TiB | 368 TiB x each license
 |===
+====
 
 ==== HA pairs
 
