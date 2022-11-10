@@ -249,9 +249,9 @@ HA pairs have two configuration types: page blob and multiple availability zone.
 | Max system capacity with disks alone
 | Max system capacity with disks and data tiering
 
-| E32ds_v4 | 29 | 232 TiB | 368 TiB
-| E48ds_v4 | 29 | 232 TiB | 368 TiB
-| E80ids_v4 | 61 | 368 TiB | 368 TiB
+| E32ds_v4 | 28 | 368 TiB | 368 TiB
+| E48ds_v4 | 28 | 368 TiB | 368 TiB
+| E80ids_v4 | 60 | 368 TiB | 368 TiB
 |===
 ====
 
@@ -293,10 +293,10 @@ HA pairs have two configuration types: page blob and multiple availability zone.
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 
-| E8ds_v4 | 13 | 104 TiB | 368 TiB | 104 TiB | 368 TiB x each license
-| E32ds_v4 | 29 | 232 TiB | 368 TiB | 232 TiB | 368 TiB x each license
-| E48ds_v4 | 29 | 232 TiB | 368 TiB | 232 TiB | 368 TiB x each license
-| E80ids_v4 | 61 | 368 TiB | 368 TiB | 488 TiB | 368 TiB x each license
+| E8ds_v4 | 12 | 368 TiB | 368 TiB | 368 TiB | 368 TiB x each license
+| E32ds_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 368 TiB x each license
+| E48ds_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 368 TiB x each license
+| E80ids_v4 | 60 | 368 TiB | 368 TiB | 368 TiB | 368 TiB x each license
 |===
 ====
 
