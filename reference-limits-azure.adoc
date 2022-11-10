@@ -160,6 +160,7 @@ If you use node-based licensing, you can purchase multiple node-based licenses f
 The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
 
 ==== Single node 
+Single node has two node-based licensing options: PAYGO Premium and BYOL.
 
 .Single node with PAYGO Premium
 [%collapsible]
@@ -215,6 +216,7 @@ The number of licenses that you can purchase for a single node system or HA pair
 ====
 
 ==== HA pairs
+HA pairs have two configuration types: page blob and multiple availability zone. Each configuration has two node-based licensing options: PAYGO Premium and BYOL.
 
 .HA pairs in a page blob configuration with PAYGO Premium
 [%collapsible]
