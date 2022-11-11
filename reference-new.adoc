@@ -17,14 +17,6 @@ Cloud Volumes ONTAP 9.11.1 includes new enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of BlueXP (formerly Cloud Manager). See the https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html[BlueXP Release Notes^] for details.
 
-== 9.12.1 RC1 (15 November 2022)
-
-Cloud Volumes ONTAP 9.12.1 Release Candidate 1 is now available in AWS, Azure, and Google Cloud. This release includes the following new features and enhancements. 
-
-=== ZRS Shared HA in multiple availability zones
-
-ZRS is a Cloud Volumes ONTAP HA pair configuration that uses managed disks as backend storage and runs in multiple Azure availability zones.
-
 == c4, m4, and r4 instances no longer supported (28 October 2022)
 
 In AWS, the c4, m4, and r4 EC2 instance types are no longer supported with Cloud Volumes ONTAP. If you have an existing system that’s running on a c4, m4, or r4 instance type, you must change to an instance type in the c5, m5, or r5 instance family.

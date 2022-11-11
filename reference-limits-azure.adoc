@@ -148,7 +148,7 @@ The following disk limits apply to Cloud Volumes ONTAP systems that use a capaci
 | E8ds_v4 | 12 | 384 TiB | 2 PiB
 | E32ds_v4 | 28 | 896 TiB | 2 PiB
 | E48ds_v4 | 28 | 896 TiB | 2 PiB
-| E80ids_v4 | 60 | 896 PiB | 2 PiB
+| E80ids_v4 | 28 | 896 TiB | 2 PiB
 |===
 
 === Limits for node-based licensing
@@ -251,7 +251,7 @@ HA pairs have two configuration types: page blob and multiple availability zone.
 
 | E32ds_v4 | 28 | 368 TiB | 368 TiB
 | E48ds_v4 | 28 | 368 TiB | 368 TiB
-| E80ids_v4 | 60 | 368 TiB | 368 TiB
+| E80ids_v4 | 28 | 368 TiB | 368 TiB
 |===
 ====
 
@@ -296,7 +296,7 @@ HA pairs have two configuration types: page blob and multiple availability zone.
 | E8ds_v4 | 12 | 368 TiB | 368 TiB | 368 TiB | 368 TiB x each license
 | E32ds_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 368 TiB x each license
 | E48ds_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 368 TiB x each license
-| E80ids_v4 | 60 | 368 TiB | 368 TiB | 368 TiB | 368 TiB x each license
+| E80ids_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 368 TiB x each license
 |===
 ====
 
