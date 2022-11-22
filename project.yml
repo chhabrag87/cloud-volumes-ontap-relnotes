@@ -6,8 +6,14 @@ settings:
   prod:
     pdf_enabled: true
   versions:
-    - name: Cloud Volumes ONTAP
+    - name: Cloud Volumes ONTAP 
       url: /cloud-volumes-ontap-relnotes
+      version-number: "9.12.1"
+    - name: Cloud Volumes ONTAP
+      url: /cloud-volumes-ontap-9120-relnotes
+      version-number: "9.12.0"
+    - name: Cloud Volumes ONTAP
+      url: /cloud-volumes-ontap-9111-relnotes
       version-number: "9.11.1"
     - name: Cloud Volumes ONTAP
       url: /cloud-volumes-ontap-9110-relnotes
