@@ -30,14 +30,14 @@ https://docs.netapp.com/us-en/ontap/object-storage-management/index.html[Learn h
 
 NVMe-TCP is supported for cloud providers if you are using Cloud Volumes ONTAP version 9.12.1 or newer. BlueXP does not provide any management capabilities for NVMe-TCP.
 
-For more information on configuring NVMe through ONTAP, see link:https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-nvme-task.html[Configure a storage VM for NVMe]
+For more information on configuring NVMe through ONTAP, see link:https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-nvme-task.html[Configure a storage VM for NVMe].
 
 === Azure HA Multiple Availability Zones 
 You can now deploy a Cloud Volumes ONTAP HA configuration using Azure multiple availability zones within a region. The new configuration protects against data center failure and maintains application availability with the use of Azure zone-redundant storage (ZRS) managed disks. 
 
 For more information about the HA configuration architecture and components, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html[High-availability pairs in Azure^]. 
 
-To use this new configuration, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html[Launching a Cloud Volumes ONTAP HA pair in Azure]^.
+To use this new configuration, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html[Launching a Cloud Volumes ONTAP HA pair in Azure^].
 
 == c4, m4, and r4 instances no longer supported (28 October 2022)
 
