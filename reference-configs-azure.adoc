@@ -166,24 +166,24 @@ a|
 * E8s_v3
 * E48s_v3 ^1^
 * E8ds_v4 ^6^
-* E32ds_v4 ^1,6^
-* E48ds_v4 ^1,6^
-* E80ids_v4 ^1,2,6^
+* E32ds_v4 ^1^
+* E48ds_v4 ^1^
+* E80ids_v4 ^1,2^
 
 a|
 * DS4_v2
 * DS13_v2
 * E8s_v3
-* E8ds_v4 ^6^ 
+* E8ds_v4 
 
 a|
 * DS5_v2 ^1^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
 * E48s_v3 ^1^
-* E32ds_v4 ^1,6^
-* E48ds_v4 ^1,6^
-* E80ids_v4 ^1,2,6^
+* E32ds_v4 ^1^
+* E48ds_v4 ^1^
+* E80ids_v4 ^1,2^
 * L16s_v3 ^1,6^
 * L32s_v3 ^1,6^
 
@@ -195,10 +195,10 @@ a|
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^6^ 
-* E32ds_v4 ^1,6^
-* E48ds_v4 ^1,6^
-* E80ids_v4 ^1,2,6^
+* E8ds_v4  
+* E32ds_v4 ^1^
+* E48ds_v4 ^1^
+* E80ids_v4 ^1,2^
 
 a|
 * DS4_v2
@@ -208,10 +208,10 @@ a|
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^6^
-* E32ds_v4 ^1,6^
-* E48ds_v4 ^1,6^
-* E80ids_v4 ^1,2,6^
+* E8ds_v4 
+* E32ds_v4 ^1^
+* E48ds_v4 ^1^
+* E80ids_v4 ^1,2^
 
 | Supported disk types 5+| Premium page blobs and managed disks
 
