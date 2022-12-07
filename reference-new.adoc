@@ -17,7 +17,7 @@ Cloud Volumes ONTAP 9.12.1 includes new enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of BlueXP (formerly Cloud Manager). See the https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html[BlueXP Release Notes^] for details.
 
-== 9.12.1 RC1 (27 November 2022)
+== 9.12.1 RC1 (8 December 2022)
 Cloud Volumes ONTAP 9.12.1 Release Candidate 1 is now available in AWS, Azure, and Google Cloud. This release includes the following new features and enhancements.
 
 === ONTAP S3 license in GCP
@@ -32,7 +32,14 @@ NVMe-TCP is supported for cloud providers if you are using Cloud Volumes ONTAP v
 
 For more information on configuring NVMe through ONTAP, see link:https://docs.netapp.com/us-en/ontap/san-admin/configure-svm-nvme-task.html[Configure a storage VM for NVMe].
 
-=== Azure HA Multiple Availability Zones 
+=== Azure HA with locally redundant storage
+You can now deploy a Cloud Volumes ONTAP HA configuration using Microsoft Azure locally redundant storage (LRS) running on top of shared managed disks. Locally redundant storage replicates your data three times within a single data center in the same region.
+ 
+For more information about the HA configuration architecture and components, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html[High-availability pairs in Azure^]. 
+ 
+To use this new configuration, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html[Launching a Cloud Volumes ONTAP HA pair in Azure^].
+
+=== Azure HA with zone-redundant storage
 You can now deploy a Cloud Volumes ONTAP HA configuration using Azure multiple availability zones within a region. The new configuration protects against data center failure and maintains application availability with the use of Azure zone-redundant storage (ZRS) managed disks. 
 
 For more information about the HA configuration architecture and components, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html[High-availability pairs in Azure^]. 
