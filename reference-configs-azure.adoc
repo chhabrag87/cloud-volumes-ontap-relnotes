@@ -56,6 +56,9 @@ a|
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* L8s_v3 ^2^
+* L16s_v3 ^2,4^
+* L32s_v3 ^2,4^
 
 a|
 * E4s_v3
@@ -95,6 +98,9 @@ a|
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* L8s_v3 ^2^
+* L16s_v3 ^2,4^
+* L32s_v3 ^2,4^
 
 a|
 * DS4_v2
@@ -112,6 +118,9 @@ a|
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* L8s_v3 ^2^
+* L16s_v3 ^2,4^
+* L32s_v3 ^2,4^
 
 | Supported disk types ^4^ 6+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks
 
