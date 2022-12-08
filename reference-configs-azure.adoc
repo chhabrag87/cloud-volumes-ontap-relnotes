@@ -78,8 +78,6 @@ a|
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
-* L16s_v3 ^2,4^
-* L32s_v3 ^2,4^
 
 a|
 * DS4_v2
@@ -213,7 +211,7 @@ a|
 * E48ds_v4 ^1,7^
 * E80ids_v4 ^1,2,7^
 
-| Supported disk types 5+| Premium page blobs and managed disks
+| Supported disk types 5+| Managed disks
 
 |===
 
@@ -229,9 +227,9 @@ Notes:
 
 . Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
 
-. This VM type includes local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html[Learn more^].
+. These VMs can support running on top of managed disks. 
 
-. These VM types are only supported for shared managed disk deployments. All new HA deployments used shared managed disks. Previously, page blobs were used. 
+. These VM types are only supported for shared managed disk deployments. All new HA deployments used shared managed disks. Previously, page blobs were used.
 
 == Supported disk sizes
 
@@ -281,7 +279,7 @@ a|
 
 === HA pairs
 
-HA pairs use Premium page blobs or managed disks. The following disk sizes are supported:
+HA pairs use managed disks. (Page blobs are supported with HA pairs deployed before the 9.12.1 release.) The following disk sizes are supported:
 
 * 500 GiB
 * 1 TiB
