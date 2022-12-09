@@ -46,7 +46,6 @@ a|
 * DS13_v2
 * DS14_v2
 * DS15_v2
-* L8s_v2 ^2^
 * E4s_v3
 * E8s_v3
 * E32s_v3 ^3^
@@ -57,6 +56,9 @@ a|
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* L8s_v3 ^2^
+* L16s_v3 ^2,4^
+* L32s_v3 ^2,4^
 
 a|
 * E4s_v3
@@ -67,6 +69,7 @@ a|
 * DS13_v2
 * E8s_v3
 * E8ds_v4 ^3^
+* L8s_v3 ^2^
 
 a|
 * DS5_v2
@@ -85,7 +88,6 @@ a|
 * DS13_v2
 * DS14_v2
 * DS15_v2
-* L8s_v2 ^2^
 * E4s_v3
 * E8s_v3
 * E32s_v3 ^3^
@@ -96,6 +98,9 @@ a|
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* L8s_v3 ^2^
+* L16s_v3 ^2,4^
+* L32s_v3 ^2,4^
 
 a|
 * DS4_v2
@@ -103,7 +108,6 @@ a|
 * DS13_v2
 * DS14_v2
 * DS15_v2
-* L8s_v2 ^2^
 * E4s_v3
 * E8s_v3
 * E32s_v3 ^3^
@@ -114,6 +118,9 @@ a|
 * E32ds_v4 ^3^
 * E48ds_v4 ^3^
 * E80ids_v4 ^3^
+* L8s_v3 ^2^
+* L16s_v3 ^2,4^
+* L32s_v3 ^2,4^
 
 | Supported disk types ^4^ 6+| Standard HDD Managed Disks, Standard SSD Managed Disks, and Premium SSD Managed Disks
 
@@ -165,38 +172,29 @@ a|
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^6^
-* E32ds_v4 ^1,6^
-* E48ds_v4 ^1,6^
-* E80ids_v4 ^1,2,6^
+* E8ds_v4 ^7^
+* E32ds_v4 ^1,7^
+* E48ds_v4 ^1,7^
+* E80ids_v4 ^1,2,7^
+* L16s_v3 ^1,6,7^
+* L32s_v3 ^1,6,7^
 
 a|
 * DS4_v2
 * DS13_v2
 * E8s_v3
-* E8ds_v4 ^6^ 
+* E8ds_v4 ^7^
 
 a|
 * DS5_v2 ^1^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
 * E48s_v3 ^1^
-* E32ds_v4 ^1,6^
-* E48ds_v4 ^1,6^
-* E80ids_v4 ^1,2,6^
-
-a|
-* DS4_v2
-* DS5_v2 ^1^
-* DS13_v2
-* DS14_v2 ^1^
-* DS15_v2 ^1^
-* E8s_v3
-* E48s_v3 ^1^
-* E8ds_v4 ^6^ 
-* E32ds_v4 ^1,6^
-* E48ds_v4 ^1,6^
-* E80ids_v4 ^1,2,6^
+* E32ds_v4 ^1,7^
+* E48ds_v4 ^1,7^
+* E80ids_v4 ^1,2,7^
+* L16s_v3 ^1,6,7^
+* L32s_v3 ^1,6,7^
 
 a|
 * DS4_v2
@@ -206,12 +204,29 @@ a|
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^6^
-* E32ds_v4 ^1,6^
-* E48ds_v4 ^1,6^
-* E80ids_v4 ^1,2,6^
+* E8ds_v4 ^7^ 
+* E32ds_v4 ^1,7^
+* E48ds_v4 ^1,7^
+* E80ids_v4 ^1,2,7^
+* L16s_v3 ^1,6,7^
+* L32s_v3 ^1,6,7^
 
-| Supported disk types 5+| Premium page blobs and managed disks
+a|
+* DS4_v2
+* DS5_v2 ^1^
+* DS13_v2
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E8s_v3
+* E48s_v3 ^1^
+* E8ds_v4 ^7^
+* E32ds_v4 ^1,7^
+* E48ds_v4 ^1,7^
+* E80ids_v4 ^1,2,7^
+* L16s_v3 ^1,6,7^
+* L32s_v3 ^1,6,7^
+
+| Supported disk types 5+| Managed disks
 
 |===
 
@@ -228,6 +243,8 @@ Notes:
 . Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
 
 . These VMs can support running on top of managed disks. 
+
+. These VM types are only supported for shared managed disk deployments. All new HA deployments used shared managed disks. Previously, page blobs were used.
 
 == Supported disk sizes
 
@@ -277,7 +294,9 @@ a|
 
 === HA pairs
 
-HA pairs use Premium page blobs or managed disks. The following disk sizes are supported:
+HA pairs use managed disks. (Page blobs are supported with HA pairs deployed before the 9.12.1 release.) 
+
+The following disk sizes are supported:
 
 * 500 GiB
 * 1 TiB

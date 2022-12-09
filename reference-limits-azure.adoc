@@ -111,10 +111,13 @@ The following disk limits apply to Cloud Volumes ONTAP systems that use a capaci
 | E32ds_v4 | 29 | 896 TiB | 2 PiB
 | E48ds_v4 | 29 | 896 TiB | 2 PiB
 | E80ids_v4 | 61 | 896 TiB | 2 PiB
+| L8s_v3 | 12 | 384 TiB | 2 PiB
+| L16s_v3 | 28 | 896 TiB | 2 PiB
+| L32s_v3 | 28 | 896 TiB | 2 PiB
 
 |===
 
-==== HA pairs with page blob
+==== HA pairs in a single availability zone with page blobs
 
 [cols="14,20,31,33",width=68%,options="header"]
 |===
@@ -136,7 +139,24 @@ The following disk limits apply to Cloud Volumes ONTAP systems that use a capaci
 | E80ids_v4 | 61 | 488 TiB | 2 PiB
 |===
 
-==== HA pairs in multiple availability zones
+==== HA pairs in a single availability zone with shared managed disks
+
+[cols="14,20,31,33",width=68%,options="header"]
+|===
+| VM size
+| Max data disks for an HA pair
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| E8ds_v4 | 12 | 384 TiB | 2 PiB
+| E32ds_v4 | 28 | 896 TiB | 2 PiB
+| E48ds_v4 | 28 | 896 TiB | 2 PiB
+| E80ids_v4 | 28 | 896 TiB | 2 PiB
+| L16s_v3 | 28 | 896 TiB | 2 PiB
+| L32s_v3 | 28 | 896 TiB | 2 PiB
+|===
+
+==== HA pairs in multiple availability zones with shared managed disks
 
 [cols="14,20,31,33",width=68%,options="header"]
 |===
@@ -218,7 +238,7 @@ Single node has two node-based licensing options: PAYGO Premium and BYOL.
 ==== HA pairs
 HA pairs have two configuration types: page blob and multiple availability zone. Each configuration has two node-based licensing options: PAYGO Premium and BYOL.
 
-.HA pairs in a page blob configuration with PAYGO Premium
+.PAYGO Premium: HA pairs in  single availability zone with page blobs
 [%collapsible]
 ====
 [cols="14,20,31,33",width=68%,options="header"]
@@ -239,7 +259,7 @@ HA pairs have two configuration types: page blob and multiple availability zone.
 |===
 ====
 
-.HA pairs in a multiple availability zone configuration with PAYGO Premium
+.PAYGO Premium: HA pairs in a multiple availability zone configuration with shared managed disks
 [%collapsible]
 ====
 [cols="14,20,31,33",width=68%,options="header"]
@@ -255,7 +275,7 @@ HA pairs have two configuration types: page blob and multiple availability zone.
 |===
 ====
 
-.HA pairs in a page blob configuration with BYOL
+.BYOL: HA pairs in  single availability zone with page blobs
 [%collapsible]
 ====
 [cols="10,18,18,18,18,18",width=100%,options="header"]
@@ -281,7 +301,7 @@ HA pairs have two configuration types: page blob and multiple availability zone.
 |===
 ====
 
-.HA pairs in a multiple availability zone configuration with BYOL
+.BYOL: HA pairs in a multiple availability zone configuration with shared managed disks 
 [%collapsible]
 ====
 [cols="10,18,18,18,18,18",width=100%,options="header"]
