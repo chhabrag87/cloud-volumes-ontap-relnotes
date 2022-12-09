@@ -294,7 +294,9 @@ a|
 
 === HA pairs
 
-HA pairs use managed disks. (Page blobs are supported with HA pairs deployed before the 9.12.1 release.) The following disk sizes are supported:
+HA pairs use managed disks. (Page blobs are supported with HA pairs deployed before the 9.12.1 release.) 
+
+The following disk sizes are supported:
 
 * 500 GiB
 * 1 TiB
