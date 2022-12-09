@@ -161,9 +161,9 @@
   <!-- Start Page Toolbar -->
   
   <div class="page-nav-toolbar"><div id="version-dropdown-new" class="custom-dropdown" >
-  <div class="custom-dropdown-select unselected" title="Cloud Volumes ONTAP 9.11.1">
+  <div class="custom-dropdown-select unselected" title="Cloud Volumes ONTAP 9.12.1">
     <label>Version</label>
-    <span translate="no" class="notranslate">Cloud Volumes ONTAP 9.11.1</span>
+    <span translate="no" class="notranslate">Cloud Volumes ONTAP 9.12.1</span>
     <img src="/us-en/cloud-volumes-ontap-relnotes/images/chevron_up.svg" alt="" class="custom-icon chevrondown invisible" />
     <img src="/us-en/cloud-volumes-ontap-relnotes/images/chevron_down.svg" alt="" class="custom-icon chevronup" />
   </div>
@@ -171,6 +171,13 @@
   <ul class="custom-dropdown-menu"><li>
       
       <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-azure.html" target="_self">
+        <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.12.1</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9111-relnotes/reference-limits-azure.html" target="_self">
         <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.11.1</span></span>
       </a>
                      
@@ -444,7 +451,7 @@
         
         
         
-        <a target="_blank" href="/us-en/cloud-volumes-ontap-relnotes/pdfs/fullsite-sidebar/Cloud_Volumes_ONTAP_9_11_1_Release_Notes.pdf" >
+        <a target="_blank" href="/us-en/cloud-volumes-ontap-relnotes/pdfs/fullsite-sidebar/Cloud_Volumes_ONTAP_9_12_1_Release_Notes.pdf" >
           <img src="/us-en/cloud-volumes-ontap-relnotes/images/pdf.png" alt="" width="16" height="16"/>PDF of this doc site</a>
 
 
@@ -766,7 +773,7 @@
         
 
         <li class="n-breadcrumb__list-item">
-          <a href="/us-en/cloud-volumes-ontap-relnotes/">Cloud&nbsp;Volumes&nbsp;ONTAP&nbsp;9.11.1&nbsp;release&nbsp;notes</a>
+          <a href="/us-en/cloud-volumes-ontap-relnotes/">Cloud&nbsp;Volumes&nbsp;ONTAP&nbsp;9.12.1&nbsp;release&nbsp;notes</a>
         </li>
 
       </ul>
@@ -783,24 +790,24 @@
 <p class="page-details">
   
     
-    <time datetime="2022-10-27 19:58:40 +0000">10/27/2022</time>
+    <time datetime="2022-12-09 15:29:46 +0000">12/09/2022</time>
     
   
 
 <span>Contributors
-  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-bcammett">
-    <img  class="avatar avatar-small"
-          alt="netapp-bcammett"
-          width="20" height="20"
-          src="https://avatars.githubusercontent.com/u/18287750?v=4"
-          style="border-radius: 50%;"/>
-  </a>
-  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-rlithman">
     <img  class="avatar avatar-small"
           alt="netapp-rlithman"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/54725121?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-bcammett">
+    <img  class="avatar avatar-small"
+          alt="netapp-bcammett"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/18287750?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -895,7 +902,8 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">Maximum aggregate size <sup>1</sup></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">384 TiB of raw capacity for single node <sup>2</sup><br>
 352 TiB of raw capacity for single node with PAYGO<br>
-96 TiB of raw capacity for HA pairs</p></td>
+96 TiB of raw capacity for HA pairs with page blob<br>
+384 TiB of raw capacity for HA pairs with managed disks</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Disks per aggregate</p></td>
@@ -946,10 +954,10 @@
 <p>A maximum system capacity is listed when using disks alone and when using disks and cold data tiering to object storage.</p>
 </li>
 <li>
-<p>Single node systems use managed disks, with up to 32 TiB per disk. The number of supported disks varies by VM size.</p>
+<p>Single node and HA systems which use managed disks have a maximum of 32 TiB per disk. The number of supported disks varies by VM size.</p>
 </li>
 <li>
-<p>HA pairs use Premium page blobs as disks, with up to 8 TiB per page blob. The number of supported disks varies by VM size.</p>
+<p>HA systems which use page blobs have a maximum of 8 TiB per page blob. The number of supported disks varies by VM size.</p>
 </li>
 <li>
 <p>The 896 TiB disk-based limit that&#8217;s listed for single node systems with certain VM sizes is the <em>tested</em> limit.</p>
@@ -1010,12 +1018,6 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">L8s_v2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">416 TiB</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">E4s_v3</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">5</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">160 TiB</p></td>
@@ -1075,11 +1077,29 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">896 TiB</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
 </tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L8s_v3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">384 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L16s_v3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L32s_v3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
 </tbody>
 </table>
 </div>
 <div class="sect3">
-<h4 id="ha-pairs">HA pairs</h4>
+<h4 id="ha-pairs-in-a-single-availability-zone-with-page-blobs">HA pairs in a single availability zone with page blobs</h4>
 <table class="tableblock frame-all grid-all" style="width: 68%;">
 <colgroup>
 <col style="width: 14.2857%;">
@@ -1160,6 +1180,108 @@
 <td class="tableblock halign-left valign-top"><p class="tableblock">E80ids_v4</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">488 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="ha-pairs-in-a-single-availability-zone-with-shared-managed-disks">HA pairs in a single availability zone with shared managed disks</h4>
+<table class="tableblock frame-all grid-all" style="width: 68%;">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 20.4081%;">
+<col style="width: 31.6326%;">
+<col style="width: 33.6736%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">VM size</th>
+<th class="tableblock halign-left valign-top">Max data disks for an HA pair</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks alone</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks and data tiering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E8ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">384 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E32ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E48ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E80ids_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L16s_v3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">L32s_v3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="ha-pairs-in-multiple-availability-zones-with-shared-managed-disks">HA pairs in multiple availability zones with shared managed disks</h4>
+<table class="tableblock frame-all grid-all" style="width: 68%;">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 20.4081%;">
+<col style="width: 31.6326%;">
+<col style="width: 33.6736%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">VM size</th>
+<th class="tableblock halign-left valign-top">Max data disks for an HA pair</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks alone</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks and data tiering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E8ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">384 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E32ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E48ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E80ids_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">896 TiB</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
 </tr>
 </tbody>
@@ -1178,7 +1300,13 @@
 <p>The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">tiering inactive data to object storage</a>. <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html" target="_blank" rel="noopener">Learn how to add additional system licenses to Cloud Volumes ONTAP</a>.</p>
 </div>
 <div class="sect3">
-<h4 id="single-node-with-paygo-premium">Single node with PAYGO Premium</h4>
+<h4 id="single-node-2">Single node</h4>
+<div class="paragraph">
+<p>Single node has two node-based licensing options: PAYGO Premium and BYOL.</p>
+</div>
+<details>
+<summary class="title">Single node with PAYGO Premium</summary>
+<div class="content">
 <table class="tableblock frame-all grid-all" style="width: 68%;">
 <colgroup>
 <col style="width: 14.2857%;">
@@ -1252,8 +1380,10 @@
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="single-node-with-byol">Single node with BYOL</h4>
+</details>
+<details>
+<summary class="title">Single node with BYOL</summary>
+<div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 10%;">
@@ -1410,8 +1540,16 @@
 </tbody>
 </table>
 </div>
+</details>
+</div>
 <div class="sect3">
-<h4 id="ha-pairs-with-paygo-premium">HA pairs with PAYGO Premium</h4>
+<h4 id="ha-pairs">HA pairs</h4>
+<div class="paragraph">
+<p>HA pairs have two configuration types: page blob and multiple availability zone. Each configuration has two node-based licensing options: PAYGO Premium and BYOL.</p>
+</div>
+<details>
+<summary class="title">PAYGO Premium: HA pairs in  single availability zone with page blobs</summary>
+<div class="content">
 <table class="tableblock frame-all grid-all" style="width: 68%;">
 <colgroup>
 <col style="width: 14.2857%;">
@@ -1479,8 +1617,51 @@
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="ha-pairs-with-byol">HA pairs with BYOL</h4>
+</details>
+<details>
+<summary class="title">PAYGO Premium: HA pairs in a multiple availability zone configuration with shared managed disks</summary>
+<div class="content">
+<table class="tableblock frame-all grid-all" style="width: 68%;">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 20.4081%;">
+<col style="width: 31.6326%;">
+<col style="width: 33.6736%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">VM size</th>
+<th class="tableblock halign-left valign-top">Max data disks for an HA pair</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks alone</th>
+<th class="tableblock halign-left valign-top">Max system capacity with disks and data tiering</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E32ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E48ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E80ids_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
+<details>
+<summary class="title">BYOL: HA pairs in  single availability zone with page blobs</summary>
+<div class="content">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 10%;">
@@ -1596,6 +1777,72 @@
 </tr>
 </tbody>
 </table>
+</div>
+</details>
+<details>
+<summary class="title">BYOL: HA pairs in a multiple availability zone configuration with shared managed disks</summary>
+<div class="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 10%;">
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 18%;">
+<col style="width: 18%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">VM size</th>
+<th class="tableblock halign-left valign-top">Max data disks for an HA pair</th>
+<th class="tableblock halign-left valign-top" colspan="2">Max system capacity with one license</th>
+<th class="tableblock halign-left valign-top" colspan="2">Max system capacity with multiple licenses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks alone</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks + data tiering</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks alone</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>Disks + data tiering</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E8ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E32ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E48ds_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">E80ids_v4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB x each license</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</details>
 </div>
 </div>
 </div>
