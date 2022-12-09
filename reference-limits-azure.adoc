@@ -52,7 +52,8 @@ Cloud Volumes ONTAP uses Azure storage as disks and groups them into _aggregates
 | Maximum aggregate size ^1^ |
 384 TiB of raw capacity for single node ^2^
 352 TiB of raw capacity for single node with PAYGO
-96 TiB of raw capacity for HA pairs
+96 TiB of raw capacity for HA pairs with page blob
+384 TiB of raw capacity for HA pairs with managed disks
 | Disks per aggregate	| 1-12 ^3^
 | Maximum number of RAID groups per aggregate	| 1
 |===
@@ -77,9 +78,9 @@ The limits do not include the root disk, core disk, and VNVRAM.
 
 * A maximum system capacity is listed when using disks alone and when using disks and cold data tiering to object storage.
 
-* Single node systems use managed disks, with up to 32 TiB per disk. The number of supported disks varies by VM size.
+* Single node and HA systems which use managed disks have a maximum of 32 TiB per disk. The number of supported disks varies by VM size.
 
-* HA pairs use Premium page blobs as disks, with up to 8 TiB per page blob. The number of supported disks varies by VM size.
+* HA systems which use page blobs have a maximum of 8 TiB per page blob. The number of supported disks varies by VM size.
 
 * The 896 TiB disk-based limit that's listed for single node systems with certain VM sizes is the _tested_ limit.
 
@@ -101,7 +102,6 @@ The following disk limits apply to Cloud Volumes ONTAP systems that use a capaci
 | DS13_v2 | 29 | 896 TiB | 2 PiB
 | DS14_v2 | 61 | 896 TiB | 2 PiB
 | DS15_v2 | 61 | 896 TiB | 2 PiB
-| L8s_v2 | 13 | 416 TiB | 2 PiB
 | E4s_v3 | 5 | 160 TiB | 2 PiB
 | E8s_v3 | 13 | 416 TiB | 2 PiB
 | E32s_v3 | 29 | 896 TiB | 2 PiB
@@ -112,10 +112,13 @@ The following disk limits apply to Cloud Volumes ONTAP systems that use a capaci
 | E32ds_v4 | 29 | 896 TiB | 2 PiB
 | E48ds_v4 | 29 | 896 TiB | 2 PiB
 | E80ids_v4 | 61 | 896 TiB | 2 PiB
+| L8s_v3 | 12 | 384 TiB | 2 PiB
+| L16s_v3 | 28 | 896 TiB | 2 PiB
+| L32s_v3 | 28 | 896 TiB | 2 PiB
 
 |===
 
-==== HA pairs
+==== HA pairs in a single availability zone with page blobs
 
 [cols="14,20,31,33",width=68%,options="header"]
 |===
@@ -137,6 +140,38 @@ The following disk limits apply to Cloud Volumes ONTAP systems that use a capaci
 | E80ids_v4 | 61 | 488 TiB | 2 PiB
 |===
 
+==== HA pairs in a single availability zone with shared managed disks
+
+[cols="14,20,31,33",width=68%,options="header"]
+|===
+| VM size
+| Max data disks for an HA pair
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| E8ds_v4 | 12 | 384 TiB | 2 PiB
+| E32ds_v4 | 28 | 896 TiB | 2 PiB
+| E48ds_v4 | 28 | 896 TiB | 2 PiB
+| E80ids_v4 | 28 | 896 TiB | 2 PiB
+| L16s_v3 | 28 | 896 TiB | 2 PiB
+| L32s_v3 | 28 | 896 TiB | 2 PiB
+|===
+
+==== HA pairs in multiple availability zones with shared managed disks
+
+[cols="14,20,31,33",width=68%,options="header"]
+|===
+| VM size
+| Max data disks for an HA pair
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
+
+| E8ds_v4 | 12 | 384 TiB | 2 PiB
+| E32ds_v4 | 28 | 896 TiB | 2 PiB
+| E48ds_v4 | 28 | 896 TiB | 2 PiB
+| E80ids_v4 | 28 | 896 TiB | 2 PiB
+|===
+
 === Limits for node-based licensing
 
 The following disk limits apply to Cloud Volumes ONTAP systems that use node-based licensing, which is the previous generation licensing model that enabled you to license Cloud Volumes ONTAP by node. Node-based licensing is still available for existing customers.
@@ -145,8 +180,12 @@ If you use node-based licensing, you can purchase multiple node-based licenses f
 
 The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html[tiering inactive data to object storage^]. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html[Learn how to add additional system licenses to Cloud Volumes ONTAP^].
 
-==== Single node with PAYGO Premium
+==== Single node 
+Single node has two node-based licensing options: PAYGO Premium and BYOL.
 
+.Single node with PAYGO Premium
+[%collapsible]
+====
 [cols="14,20,31,33",width=68%,options="header"]
 |===
 | VM size
@@ -164,9 +203,11 @@ The number of licenses that you can purchase for a single node system or HA pair
 | E48ds_v4 | 29 | 368 TiB | 368 TiB
 | E80ids_v4 | 61 | 368 TiB | 368 TiB
 |===
+====
 
-==== Single node with BYOL
-
+.Single node with BYOL
+[%collapsible]
+====
 [cols="10,18,18,18,18,18",width=100%,options="header"]
 |===
 | VM size
@@ -193,9 +234,14 @@ The number of licenses that you can purchase for a single node system or HA pair
 | E48ds_v4 | 29 | 368 TiB | 368 TiB | 896 TiB | 368 TiB x each license
 | E80ids_v4 | 61 | 368 TiB | 368 TiB | 896 TiB | 368 TiB x each license
 |===
+====
 
-==== HA pairs with PAYGO Premium
+==== HA pairs
+HA pairs have two configuration types: page blob and multiple availability zone. Each configuration has two node-based licensing options: PAYGO Premium and BYOL.
 
+.PAYGO Premium: HA pairs in  single availability zone with page blobs
+[%collapsible]
+====
 [cols="14,20,31,33",width=68%,options="header"]
 |===
 | VM size
@@ -212,9 +258,27 @@ The number of licenses that you can purchase for a single node system or HA pair
 | E48ds_v4 | 29 | 232 TiB | 368 TiB
 | E80ids_v4 | 61 | 368 TiB | 368 TiB
 |===
+====
 
-==== HA pairs with BYOL
+.PAYGO Premium: HA pairs in a multiple availability zone configuration with shared managed disks
+[%collapsible]
+====
+[cols="14,20,31,33",width=68%,options="header"]
+|===
+| VM size
+| Max data disks for an HA pair
+| Max system capacity with disks alone
+| Max system capacity with disks and data tiering
 
+| E32ds_v4 | 28 | 368 TiB | 368 TiB
+| E48ds_v4 | 28 | 368 TiB | 368 TiB
+| E80ids_v4 | 28 | 368 TiB | 368 TiB
+|===
+====
+
+.BYOL: HA pairs in  single availability zone with page blobs
+[%collapsible]
+====
 [cols="10,18,18,18,18,18",width=100%,options="header"]
 |===
 | VM size
@@ -236,6 +300,26 @@ The number of licenses that you can purchase for a single node system or HA pair
 | E48ds_v4 | 29 | 232 TiB | 368 TiB | 232 TiB | 368 TiB x each license
 | E80ids_v4 | 61 | 368 TiB | 368 TiB | 488 TiB | 368 TiB x each license
 |===
+====
+
+.BYOL: HA pairs in a multiple availability zone configuration with shared managed disks 
+[%collapsible]
+====
+[cols="10,18,18,18,18,18",width=100%,options="header"]
+|===
+| VM size
+| Max data disks for an HA pair
+2+| Max system capacity with one license
+2+| Max system capacity with multiple licenses
+
+2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
+
+| E8ds_v4 | 12 | 368 TiB | 368 TiB | 368 TiB | 368 TiB x each license
+| E32ds_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 368 TiB x each license
+| E48ds_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 368 TiB x each license
+| E80ids_v4 | 28 | 368 TiB | 368 TiB | 368 TiB | 368 TiB x each license
+|===
+====
 
 == Storage VM limits
 
