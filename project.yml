@@ -1,13 +1,16 @@
 settings:
-  name: Cloud Volumes ONTAP 9.11.1 release notes
+  name: Cloud Volumes ONTAP 9.12.1 release notes
   platform: cloud
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
   versions:
-    - name: Cloud Volumes ONTAP
+    - name: Cloud Volumes ONTAP 
       url: /cloud-volumes-ontap-relnotes
+      version-number: "9.12.1"
+    - name: Cloud Volumes ONTAP
+      url: /cloud-volumes-ontap-9111-relnotes
       version-number: "9.11.1"
     - name: Cloud Volumes ONTAP
       url: /cloud-volumes-ontap-9110-relnotes

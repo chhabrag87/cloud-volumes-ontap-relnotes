@@ -165,38 +165,25 @@ a|
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^1^
-* E32ds_v4 ^1^
-* E48ds_v4 ^1^
-* E80ids_v4 ^1,2^
+* E8ds_v4 ^6^
+* E32ds_v4 ^1,6^
+* E48ds_v4 ^1,6^
+* E80ids_v4 ^1,2,6^
 
 a|
 * DS4_v2
 * DS13_v2
-* E8ds_v4 ^1^
+* E8s_v3
+* E8ds_v4 ^6^ 
 
 a|
 * DS5_v2 ^1^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
-* E8s_v3
 * E48s_v3 ^1^
-* E32ds_v4 ^1^
-* E48ds_v4 ^1^
-* E80ids_v4 ^1,2^
-
-a|
-* DS4_v2
-* DS5_v2 ^1^
-* DS13_v2
-* DS14_v2 ^1^
-* DS15_v2 ^1^
-* E8s_v3
-* E48s_v3 ^1^
-* E8ds_v4 ^1^
-* E32ds_v4 ^1^
-* E48ds_v4 ^1^
-* E80ids_v4 ^1,2^
+* E32ds_v4 ^1,6^
+* E48ds_v4 ^1,6^
+* E80ids_v4 ^1,2,6^
 
 a|
 * DS4_v2
@@ -206,12 +193,25 @@ a|
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^1^
-* E32ds_v4 ^1^
-* E48ds_v4 ^1^
-* E80ids_v4 ^1,2^
+* E8ds_v4 ^6^ 
+* E32ds_v4 ^1,6^
+* E48ds_v4 ^1,6^
+* E80ids_v4 ^1,2,6^
 
-| Supported disk types 5+| Premium page blobs
+a|
+* DS4_v2
+* DS5_v2 ^1^
+* DS13_v2
+* DS14_v2 ^1^
+* DS15_v2 ^1^
+* E8s_v3
+* E48s_v3 ^1^
+* E8ds_v4 ^6^
+* E32ds_v4 ^1,6^
+* E48ds_v4 ^1,6^
+* E80ids_v4 ^1,2,6^
+
+| Supported disk types 5+| Premium page blobs and managed disks
 
 |===
 
@@ -226,6 +226,8 @@ Notes:
 . For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
 . Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
+
+. These VMs can support running on top of managed disks. 
 
 == Supported disk sizes
 
@@ -275,10 +277,12 @@ a|
 
 === HA pairs
 
-HA pairs use Premium page blobs. The following disk sizes are supported:
+HA pairs use Premium page blobs or managed disks. The following disk sizes are supported:
 
 * 500 GiB
 * 1 TiB
 * 2 TiB
 * 4 TiB
 * 8 TiB
+* 16 TiB (managed disks only)
+* 32 TiB (managed disks only)
