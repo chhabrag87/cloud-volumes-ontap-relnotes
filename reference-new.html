@@ -177,6 +177,13 @@
     </li>
     <li>
       
+      <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9120-relnotes/reference-new.html" target="_self">
+        <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.12.0</span></span>
+      </a>
+                     
+    </li>
+    <li>
+      
       <a href="https://docs.netapp.com/us-en/cloud-volumes-ontap-9111-relnotes/reference-new.html" target="_self">
         <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.11.1</span></span>
       </a>
@@ -790,7 +797,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-09 16:28:38 +0000">12/09/2022</time>
+    <time datetime="2022-12-15 15:23:15 +0000">12/15/2022</time>
     
   
 
@@ -831,30 +838,6 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>Cloud Volumes ONTAP 9.12.1 Release Candidate 1 is now available in AWS, Azure, and Google Cloud. This release includes the following new features and enhancements.</p>
-</div>
-<div class="sect2">
-<h3 id="supported-upgrade-path">Supported upgrade path</h3>
-<div class="paragraph">
-<p>You can upgrade to Cloud Volumes ONTAP 9.12.1 from the 9.11.1 release. BlueXP will prompt you to upgrade eligible Cloud Volumes ONTAP systems to this release.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="required-version-of-the-connector">Required version of the Connector</h3>
-<div class="paragraph">
-<p>The BlueXP Connector must be running version 3.9.24 or later to deploy new Cloud Volumes ONTAP 9.12.1 systems and to upgrade existing systems to 9.12.1.</p>
-</div>
-<div class="admonitionblock tip">
-<table>
-<tr>
-<td class="icon">
-<img src="/us-en/cloud-volumes-ontap-relnotes/images/tip.svg" alt="Tip">
-</td>
-<td class="content">
-Automatic upgrades of the Connector are enabled by default so you should be running the latest version.
-</td>
-</tr>
-</table>
-</div>
 </div>
 <div class="sect2">
 <h3 id="ontap-s3-license-in-gcp">ONTAP S3 license in GCP</h3>
@@ -901,8 +884,59 @@ Automatic upgrades of the Connector are enabled by default so you should be runn
 </div>
 </div>
 <div class="sect1">
-<h2 id="c4-m4-and-r4-instances-no-longer-supported-28-october-2022">c4, m4, and r4 instances no longer supported (28 October 2022)</h2>
+<h2 id="upgrade-notes">Upgrade notes</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Read through these notes to learn more about upgrading to this release.</p>
+</div>
+<div class="sect2">
+<h3 id="how-to-upgrade">How to upgrade</h3>
+<div class="paragraph">
+<p>Upgrades of Cloud Volumes ONTAP must be completed from BlueXP. You should not upgrade Cloud Volumes ONTAP by using System Manager or the CLI. Doing so can impact system stability.</p>
+</div>
+<div class="paragraph">
+<p><a href="http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html" target="_blank" rel="noopener">Learn how to upgrade when BlueXP notifies you</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="supported-upgrade-path">Supported upgrade path</h3>
+<div class="paragraph">
+<p>You can upgrade to Cloud Volumes ONTAP 9.12.1 from the 9.12.0 and 9.11.1 releases. BlueXP will prompt you to upgrade eligible Cloud Volumes ONTAP systems to this release.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="required-version-of-the-connector">Required version of the Connector</h3>
+<div class="paragraph">
+<p>The BlueXP Connector must be running version 3.9.24 or later to deploy new Cloud Volumes ONTAP 9.12.1 systems and to upgrade existing systems to 9.12.1.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<img src="/us-en/cloud-volumes-ontap-relnotes/images/tip.svg" alt="Tip">
+</td>
+<td class="content">
+Automatic upgrades of the Connector are enabled by default so you should be running the latest version.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="downtime">Downtime</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>The upgrade of a single node system takes the system offline for up to 25 minutes, during which I/O is interrupted.</p>
+</li>
+<li>
+<p>Upgrading an HA pair is nondisruptive and I/O is uninterrupted. During this nondisruptive upgrade process, each node is upgraded in tandem to continue serving I/O to clients.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="c4-m4-and-r4-instances-no-longer-supported">c4, m4, and r4 instances no longer supported</h3>
 <div class="paragraph">
 <p>In AWS, the c4, m4, and r4 EC2 instance types are no longer supported with Cloud Volumes ONTAP. If you have an existing system that’s running on a c4, m4, or r4 instance type, you must change to an instance type in the c5, m5, or r5 instance family.</p>
 </div>
@@ -911,6 +945,7 @@ Automatic upgrades of the Connector are enabled by default so you should be runn
 </div>
 <div class="paragraph">
 <p>Refer to <a href="https://mysupport.netapp.com/info/communications/ECMLP2880231.html" target="_blank" rel="noopener">NetApp Support</a> to learn more about the end of availability and support for these instance types.</p>
+</div>
 </div>
 </div>
 </div>
