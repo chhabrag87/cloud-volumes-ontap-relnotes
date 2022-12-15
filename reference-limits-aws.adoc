@@ -106,7 +106,10 @@ The following disk limits apply to Cloud Volumes ONTAP systems that use a capaci
 | Max system capacity with disks and data tiering
 
 | c5, m5, and r5 instances | 21 | 336 TiB | 2 PiB
-| m5dn.24xlarge | 19 ^1^ | 304 TiB | 2 PiB
+a|
+* m5dn.24xlarge
+* m6id.32xlarge
+| 19 ^1^ | 304 TiB | 2 PiB
 |===
 
 . This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.
@@ -121,7 +124,9 @@ The following disk limits apply to Cloud Volumes ONTAP systems that use a capaci
 | Max system capacity with disks and data tiering
 
 | c5, m5, and r5 instances | 18 | 288 TiB | 2 PiB
-| m5dn.24xlarge | 16 ^1^ | 256 TiB | 2 PiB
+a|
+* m5dn.24xlarge
+* m6id.32xlarge | 16 ^1^ | 256 TiB | 2 PiB
 |===
 
 . This instance type has more local NVMe disks than other instance types, which means a smaller number of data disks are supported.
@@ -144,7 +149,9 @@ The number of licenses that you can purchase for a single node system or HA pair
 | Max system capacity with disks and data tiering
 
 | c5, m5, and r5 instances | 21 ^1^ | 336 TiB | 368 TiB
-| m5dn.24xlarge | 19 ^2^ | 304 TiB | 368 TiB
+a|
+* m5dn.24xlarge
+* m6id.32xlarge | 19 ^2^ | 304 TiB | 368 TiB
 |===
 
 . 21 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 22 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
@@ -162,7 +169,9 @@ The number of licenses that you can purchase for a single node system or HA pair
 
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 | c5, m5, and r5 instances | 21 ^1^ | 336 TiB | 368 TiB | 336 TiB | 368 TiB x each license
-| m5dn.24xlarge | 19 ^2^ | 304 TiB | 368 TiB | 304 TiB | 368 TiB x each license
+a|
+* m5dn.24xlarge
+* m6id.32xlarge | 19 ^2^ | 304 TiB | 368 TiB | 304 TiB | 368 TiB x each license
 |===
 
 . 21 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 22 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
@@ -179,7 +188,9 @@ The number of licenses that you can purchase for a single node system or HA pair
 | Max system capacity with disks and data tiering
 
 | c5, m5, and r5 instances | 18 ^1^ | 288 TiB | 368 TiB
-| m5dn.24xlarge | 16 ^2^ | 256 TiB | 368 TiB
+a|
+* m5dn.24xlarge
+* m6id.32xlarge | 16 ^2^ | 256 TiB | 368 TiB
 |===
 
 . 18 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 19 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
@@ -198,7 +209,9 @@ The number of licenses that you can purchase for a single node system or HA pair
 2+| | *Disks alone* | *Disks + data tiering* | *Disks alone* | *Disks + data tiering*
 
 | c5, m5, and r5 instances | 18 ^1^ | 288 TiB | 368 TiB | 288 TiB | 368 TiB x each license
-| m5dn.24xlarge | 16 ^2^ | 256 TiB | 368 TiB | 256 TiB | 368 TiB x each license
+a|
+* m5dn.24xlarge
+* m6id.32xlarge | 16 ^2^ | 256 TiB | 368 TiB | 256 TiB | 368 TiB x each license
 |===
 
 . 18 data disks is the limit for _new_ deployments of Cloud Volumes ONTAP. If you upgrade a system that was created with version 9.7 or earlier, then the system continues to support 19 disks. One less data disk is supported on new systems that use these instance types because of the addition of a core disk starting with the 9.8 release.
