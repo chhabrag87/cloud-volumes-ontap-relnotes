@@ -211,13 +211,13 @@ Notes:
 
 . Cloud Volumes ONTAP supports high write speed with these VM types when using an HA pair. You can enable high write speed from BlueXP during deployment or any time after. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html[Learn more about choosing a write speed^].
 
-. This VM is recommended only when Azure maintenance control is needed. It's not recommended for any other use case due to the higher pricing.
+//. This VM is recommended only when Azure maintenance control is needed. It's not recommended for any other use case due to the higher pricing.
 
-. PAYGO Explore isn't supported with HA pairs in Azure.
+//. PAYGO Explore isn't supported with HA pairs in Azure.
 
-. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+//. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
-. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
+//. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
 
 ==== HA pairs with shared managed disks
 
@@ -236,38 +236,38 @@ Notes:
 | Supported virtual machine types
 
 a|
-* E8ds_v4 ^6,7^
-* E32ds_v4 ^1,6,7^
-* E48ds_v4 ^1,6,7^
-* E80ids_v4 ^1,2,6,7^
-* L16s_v3 ^1,6^
-* L32s_v3 ^1,6^
+* E8ds_v4 ^3,4^
+* E32ds_v4 ^1,3,4^
+* E48ds_v4 ^1,3,4^
+* E80ids_v4 ^1,2,3,4^
+* L16s_v3 ^1,3^
+* L32s_v3 ^1,3^
 
 a|
-* E8ds_v4 ^6,7^
+* E8ds_v4 ^3,4^
 
 a|
-* E32ds_v4 ^1,6,7^
-* E48ds_v4 ^1,6,7^
-* E80ids_v4 ^1,2,6,7^
-* L16s_v3 ^1,6^
-* L32s_v3 ^1,6^
+* E32ds_v4 ^1,3,4^
+* E48ds_v4 ^1,3,4^
+* E80ids_v4 ^1,2,3,4^
+* L16s_v3 ^1,3^
+* L32s_v3 ^1,3^
 
 a|
-* E8ds_v4 ^6,7^ 
-* E32ds_v4 ^1,6,7^
-* E48ds_v4 ^1,6,7^
-* E80ids_v4 ^1,2,6,7^
-* L16s_v3 ^1,6^
-* L32s_v3 ^1,6^
+* E8ds_v4 ^3,4^ 
+* E32ds_v4 ^1,3,4^
+* E48ds_v4 ^1,3,4^
+* E80ids_v4 ^1,2,3,4^
+* L16s_v3 ^1,3^
+* L32s_v3 ^1,3^
 
 a|
-* E8ds_v4 ^6,7^
-* E32ds_v4 ^1,6,7^
-* E48ds_v4 ^1,6,7^
-* E80ids_v4 ^1,2,6,7^
-* L16s_v3 ^1,6^
-* L32s_v3 ^1,6^
+* E8ds_v4 ^3,4^
+* E32ds_v4 ^1,3,4^
+* E48ds_v4 ^1,3,4^
+* E80ids_v4 ^1,2,3,4^
+* L16s_v3 ^1,3^
+* L32s_v3 ^1,3^
 
 | Supported disk types 5+| Managed disks
 
@@ -279,15 +279,15 @@ Notes:
 
 . This VM is recommended only when Azure maintenance control is needed. It's not recommended for any other use case due to the higher pricing.
 
-. PAYGO Explore isn't supported with HA pairs in Azure.
-
-. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
-
-. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
-
 . These VM types are only supported for HA pairs in a single availability zone configuration running on shared managed disks. 
 
 . These VM types are only supported for HA pairs in a multiple availability zone configuration running on shared managed disks. 
+
+//. PAYGO Explore isn't supported with HA pairs in Azure.
+
+//. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+
+//. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
 
 == Supported disk sizes
 
