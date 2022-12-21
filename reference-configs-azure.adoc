@@ -147,8 +147,9 @@ Conversely, if you deployed Cloud Volumes ONTAP using any other VM type, you won
 . Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
 
 === HA pairs
-
 You can choose from the following configurations when deploying Cloud Volumes ONTAP as an HA pair in Azure.
+
+==== HA pairs with page blob 
 
 [cols=6*,cols="h,d,d,d,d,d",options="header"]
 |===
@@ -172,29 +173,17 @@ a|
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^7^
-* E32ds_v4 ^1,7^
-* E48ds_v4 ^1,7^
-* E80ids_v4 ^1,2,7^
-* L16s_v3 ^1,6,7^
-* L32s_v3 ^1,6,7^
 
 a|
 * DS4_v2
 * DS13_v2
 * E8s_v3
-* E8ds_v4 ^7^
 
 a|
 * DS5_v2 ^1^
 * DS14_v2 ^1^
 * DS15_v2 ^1^
 * E48s_v3 ^1^
-* E32ds_v4 ^1,7^
-* E48ds_v4 ^1,7^
-* E80ids_v4 ^1,2,7^
-* L16s_v3 ^1,6,7^
-* L32s_v3 ^1,6,7^
 
 a|
 * DS4_v2
@@ -204,12 +193,6 @@ a|
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^7^ 
-* E32ds_v4 ^1,7^
-* E48ds_v4 ^1,7^
-* E80ids_v4 ^1,2,7^
-* L16s_v3 ^1,6,7^
-* L32s_v3 ^1,6,7^
 
 a|
 * DS4_v2
@@ -219,12 +202,75 @@ a|
 * DS15_v2 ^1^
 * E8s_v3
 * E48s_v3 ^1^
-* E8ds_v4 ^7^
-* E32ds_v4 ^1,7^
-* E48ds_v4 ^1,7^
-* E80ids_v4 ^1,2,7^
-* L16s_v3 ^1,6,7^
-* L32s_v3 ^1,6,7^
+
+| Supported disk types 5+| Page blobs
+
+|===
+
+Notes:
+
+. Cloud Volumes ONTAP supports high write speed with these VM types when using an HA pair. You can enable high write speed from BlueXP during deployment or any time after. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html[Learn more about choosing a write speed^].
+
+. This VM is recommended only when Azure maintenance control is needed. It's not recommended for any other use case due to the higher pricing.
+
+. PAYGO Explore isn't supported with HA pairs in Azure.
+
+. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
+
+. Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
+
+==== HA pairs with shared managed disks
+
+[cols=6*,cols="h,d,d,d,d,d",options="header"]
+|===
+|
+| Freemium
+| PAYGO Standard
+| PAYGO Premium
+| Node-based BYOL
+| Capacity-based license
+
+| Maximum system capacity
+(disks + object storage) | 500 GiB | 10 TiB | 368 TiB | 368 TiB per license | 2 PiB
+
+| Supported virtual machine types
+
+a|
+* E8ds_v4 ^6,7^
+* E32ds_v4 ^1,6,7^
+* E48ds_v4 ^1,6,7^
+* E80ids_v4 ^1,2,6,7^
+* L16s_v3 ^1,6^
+* L32s_v3 ^1,6^
+
+a|
+* DS4_v2
+* DS13_v2
+* E8s_v3
+* E8ds_v4 ^6,7^
+
+a|
+* E32ds_v4 ^1,6,7^
+* E48ds_v4 ^1,6,7^
+* E80ids_v4 ^1,2,6,7^
+* L16s_v3 ^1,6^
+* L32s_v3 ^1,6^
+
+a|
+* E8ds_v4 ^6,7^ 
+* E32ds_v4 ^1,6,7^
+* E48ds_v4 ^1,6,7^
+* E80ids_v4 ^1,2,6,7^
+* L16s_v3 ^1,6^
+* L32s_v3 ^1,6^
+
+a|
+* E8ds_v4 ^6,7^
+* E32ds_v4 ^1,6,7^
+* E48ds_v4 ^1,6,7^
+* E80ids_v4 ^1,2,6,7^
+* L16s_v3 ^1,6^
+* L32s_v3 ^1,6^
 
 | Supported disk types 5+| Managed disks
 
@@ -242,9 +288,9 @@ Notes:
 
 . Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
 
-. These VMs can support running on top of managed disks. 
+. These VM types are only supported for HA pairs in a single availability zone configuration running on shared managed disks. 
 
-. These VM types are only supported for shared managed disk deployments. All new HA deployments used shared managed disks. Previously, page blobs were used.
+. These VM types are only supported for HA pairs in a multiple availability zone configuration running on shared managed disks. 
 
 == Supported disk sizes
 
