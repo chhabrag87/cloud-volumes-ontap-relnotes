@@ -236,36 +236,36 @@ Notes:
 | Supported virtual machine types
 
 a|
-* E8ds_v4 ^3,4^
-* E32ds_v4 ^1,3,4^
-* E48ds_v4 ^1,3,4^
-* E80ids_v4 ^1,2,3,4^
+* E8ds_v4 ^4^
+* E32ds_v4 ^1,4^
+* E48ds_v4 ^1,4^
+* E80ids_v4 ^1,2,4^
 * L16s_v3 ^1,3^
 * L32s_v3 ^1,3^
 
 a|
-* E8ds_v4 ^3,4^
+* E8ds_v4 ^4^
 
 a|
-* E32ds_v4 ^1,3,4^
-* E48ds_v4 ^1,3,4^
-* E80ids_v4 ^1,2,3,4^
+* E32ds_v4 ^1,4^
+* E48ds_v4 ^1,4^
+* E80ids_v4 ^1,2,4^
 * L16s_v3 ^1,3^
 * L32s_v3 ^1,3^
 
 a|
-* E8ds_v4 ^3,4^ 
-* E32ds_v4 ^1,3,4^
-* E48ds_v4 ^1,3,4^
-* E80ids_v4 ^1,2,3,4^
+* E8ds_v4 ^4^ 
+* E32ds_v4 ^1,4^
+* E48ds_v4 ^1,4^
+* E80ids_v4 ^1,2,4^
 * L16s_v3 ^1,3^
 * L32s_v3 ^1,3^
 
 a|
-* E8ds_v4 ^3,4^
-* E32ds_v4 ^1,3,4^
-* E48ds_v4 ^1,3,4^
-* E80ids_v4 ^1,2,3,4^
+* E8ds_v4 ^4^
+* E32ds_v4 ^1,4^
+* E48ds_v4 ^1,4^
+* E80ids_v4 ^1,2,4^
 * L16s_v3 ^1,3^
 * L32s_v3 ^1,3^
 
@@ -281,7 +281,7 @@ Notes:
 
 . These VM types are only supported for HA pairs in a single availability zone configuration running on shared managed disks. 
 
-. These VM types are only supported for HA pairs in a multiple availability zone configuration running on shared managed disks. 
+. These VM types are supported for HA pairs in single availability zone and multiple availability zone configurations running on shared managed disks.
 
 //. PAYGO Explore isn't supported with HA pairs in Azure.
 
