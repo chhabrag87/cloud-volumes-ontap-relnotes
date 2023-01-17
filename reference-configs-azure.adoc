@@ -229,7 +229,7 @@ Notes:
 
 . This VM is recommended only when Azure maintenance control is needed. It's not recommended for any other use case due to the higher pricing.
 
-. These VM types are only supported in deployments of Cloud Volumes ONTAP 9.12.0 or earlier. 
+. These VM types are only supported in deployments of Cloud Volumes ONTAP 9.12.1 or earlier. 
 
 //. This VM is recommended only when Azure maintenance control is needed. It's not recommended for any other use case due to the higher pricing.
 
