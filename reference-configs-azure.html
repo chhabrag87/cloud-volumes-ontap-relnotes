@@ -797,7 +797,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-09 14:31:02 +0000">12/09/2022</time>
+    <time datetime="2023-01-17 15:58:46 +0000">01/17/2023</time>
     
   
 
@@ -1159,6 +1159,8 @@
 <div class="paragraph">
 <p>You can choose from the following configurations when deploying Cloud Volumes ONTAP as an HA pair in Azure.</p>
 </div>
+<div class="sect3">
+<h4 id="ha-pairs-with-page-blob">HA pairs with page blob</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 16.6666%;">
@@ -1214,22 +1216,16 @@
 <p>E48s_v3 <sup>1</sup></p>
 </li>
 <li>
-<p>E8ds_v4 <sup>7</sup></p>
+<p>E8ds_v4 <sup>3</sup></p>
 </li>
 <li>
-<p>E32ds_v4 <sup>1,7</sup></p>
+<p>E32ds_v4 <sup>1,3</sup></p>
 </li>
 <li>
-<p>E48ds_v4 <sup>1,7</sup></p>
+<p>E48ds_v4 <sup>1,3</sup></p>
 </li>
 <li>
-<p>E80ids_v4 <sup>1,2,7</sup></p>
-</li>
-<li>
-<p>L16s_v3 <sup>1,6,7</sup></p>
-</li>
-<li>
-<p>L32s_v3 <sup>1,6,7</sup></p>
+<p>E80ids_v4 <sup>1,2,3</sup></p>
 </li>
 </ul>
 </div></div></td>
@@ -1245,7 +1241,7 @@
 <p>E8s_v3</p>
 </li>
 <li>
-<p>E8ds_v4 <sup>7</sup></p>
+<p>E8ds_v4 <sup>3</sup></p>
 </li>
 </ul>
 </div></div></td>
@@ -1264,19 +1260,13 @@
 <p>E48s_v3 <sup>1</sup></p>
 </li>
 <li>
-<p>E32ds_v4 <sup>1,7</sup></p>
+<p>E32ds_v4 <sup>1,3</sup></p>
 </li>
 <li>
-<p>E48ds_v4 <sup>1,7</sup></p>
+<p>E48ds_v4 <sup>1,3</sup></p>
 </li>
 <li>
-<p>E80ids_v4 <sup>1,2,7</sup></p>
-</li>
-<li>
-<p>L16s_v3 <sup>1,6,7</sup></p>
-</li>
-<li>
-<p>L32s_v3 <sup>1,6,7</sup></p>
+<p>E80ids_v4 <sup>1,2,3</sup></p>
 </li>
 </ul>
 </div></div></td>
@@ -1304,22 +1294,16 @@
 <p>E48s_v3 <sup>1</sup></p>
 </li>
 <li>
-<p>E8ds_v4 <sup>7</sup></p>
+<p>E8ds_v4 <sup>3</sup></p>
 </li>
 <li>
-<p>E32ds_v4 <sup>1,7</sup></p>
+<p>E32ds_v4 <sup>1,3</sup></p>
 </li>
 <li>
-<p>E48ds_v4 <sup>1,7</sup></p>
+<p>E48ds_v4 <sup>1,3</sup></p>
 </li>
 <li>
-<p>E80ids_v4 <sup>1,2,7</sup></p>
-</li>
-<li>
-<p>L16s_v3 <sup>1,6,7</sup></p>
-</li>
-<li>
-<p>L32s_v3 <sup>1,6,7</sup></p>
+<p>E80ids_v4 <sup>1,2,3</sup></p>
 </li>
 </ul>
 </div></div></td>
@@ -1347,22 +1331,165 @@
 <p>E48s_v3 <sup>1</sup></p>
 </li>
 <li>
-<p>E8ds_v4 <sup>7</sup></p>
+<p>E8ds_v4 <sup>3</sup></p>
 </li>
 <li>
-<p>E32ds_v4 <sup>1,7</sup></p>
+<p>E32ds_v4 <sup>1,3</sup></p>
 </li>
 <li>
-<p>E48ds_v4 <sup>1,7</sup></p>
+<p>E48ds_v4 <sup>1,3</sup></p>
 </li>
 <li>
-<p>E80ids_v4 <sup>1,2,7</sup></p>
+<p>E80ids_v4 <sup>1,2,3</sup></p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Supported disk types</p></th>
+<td class="tableblock halign-left valign-top" colspan="5"><p class="tableblock">Page blobs</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Notes:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Cloud Volumes ONTAP supports high write speed with these VM types when using an HA pair. You can enable high write speed from BlueXP during deployment or any time after. <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html" target="_blank" rel="noopener">Learn more about choosing a write speed</a>.</p>
 </li>
 <li>
-<p>L16s_v3 <sup>1,6,7</sup></p>
+<p>This VM is recommended only when Azure maintenance control is needed. It&#8217;s not recommended for any other use case due to the higher pricing.</p>
 </li>
 <li>
-<p>L32s_v3 <sup>1,6,7</sup></p>
+<p>These VM types are only supported in deployments of Cloud Volumes ONTAP 9.12.1 or earlier.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ha-pairs-with-shared-managed-disks">HA pairs with shared managed disks</h4>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.6666%;">
+<col style="width: 16.667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">Freemium</th>
+<th class="tableblock halign-left valign-top">PAYGO Standard</th>
+<th class="tableblock halign-left valign-top">PAYGO Premium</th>
+<th class="tableblock halign-left valign-top">Node-based BYOL</th>
+<th class="tableblock halign-left valign-top">Capacity-based license</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Maximum system capacity<br>
+(disks + object storage)</p></th>
+<td class="tableblock halign-left valign-top"><p class="tableblock">500 GiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">368 TiB per license</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 PiB</p></td>
+</tr>
+<tr>
+<th class="tableblock halign-left valign-top"><p class="tableblock">Supported virtual machine types</p></th>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>E8ds_v4 <sup>4</sup></p>
+</li>
+<li>
+<p>E32ds_v4 <sup>1,4</sup></p>
+</li>
+<li>
+<p>E48ds_v4 <sup>1,4</sup></p>
+</li>
+<li>
+<p>E80ids_v4 <sup>1,2,4</sup></p>
+</li>
+<li>
+<p>L16s_v3 <sup>1,3</sup></p>
+</li>
+<li>
+<p>L32s_v3 <sup>1,3</sup></p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>E8ds_v4 <sup>4</sup></p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>E32ds_v4 <sup>1,4</sup></p>
+</li>
+<li>
+<p>E48ds_v4 <sup>1,4</sup></p>
+</li>
+<li>
+<p>E80ids_v4 <sup>1,2,4</sup></p>
+</li>
+<li>
+<p>L16s_v3 <sup>1,3</sup></p>
+</li>
+<li>
+<p>L32s_v3 <sup>1,3</sup></p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>E8ds_v4 <sup>4</sup></p>
+</li>
+<li>
+<p>E32ds_v4 <sup>1,4</sup></p>
+</li>
+<li>
+<p>E48ds_v4 <sup>1,4</sup></p>
+</li>
+<li>
+<p>E80ids_v4 <sup>1,2,4</sup></p>
+</li>
+<li>
+<p>L16s_v3 <sup>1,3</sup></p>
+</li>
+<li>
+<p>L32s_v3 <sup>1,3</sup></p>
+</li>
+</ul>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="ulist">
+<ul>
+<li>
+<p>E8ds_v4 <sup>4</sup></p>
+</li>
+<li>
+<p>E32ds_v4 <sup>1,4</sup></p>
+</li>
+<li>
+<p>E48ds_v4 <sup>1,4</sup></p>
+</li>
+<li>
+<p>E80ids_v4 <sup>1,2,4</sup></p>
+</li>
+<li>
+<p>L16s_v3 <sup>1,3</sup></p>
+</li>
+<li>
+<p>L32s_v3 <sup>1,3</sup></p>
 </li>
 </ul>
 </div></div></td>
@@ -1385,21 +1512,13 @@
 <p>This VM is recommended only when Azure maintenance control is needed. It&#8217;s not recommended for any other use case due to the higher pricing.</p>
 </li>
 <li>
-<p>PAYGO Explore isn&#8217;t supported with HA pairs in Azure.</p>
+<p>These VM types are only supported for HA pairs in a single availability zone configuration running on shared managed disks.</p>
 </li>
 <li>
-<p>For Azure region support, see <a href="https://cloud.netapp.com/cloud-volumes-global-regions" target="_blank" rel="noopener">Cloud Volumes Global Regions</a>.</p>
-</li>
-<li>
-<p>Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren&#8217;t supported.</p>
-</li>
-<li>
-<p>These VMs can support running on top of managed disks.</p>
-</li>
-<li>
-<p>These VM types are only supported for shared managed disk deployments. All new HA deployments used shared managed disks. Previously, page blobs were used.</p>
+<p>These VM types are supported for HA pairs in single availability zone and multiple availability zone configurations running on shared managed disks.</p>
 </li>
 </ol>
+</div>
 </div>
 </div>
 </div>
@@ -1539,12 +1658,6 @@
 </li>
 <li>
 <p>8 TiB</p>
-</li>
-<li>
-<p>16 TiB (managed disks only)</p>
-</li>
-<li>
-<p>32 TiB (managed disks only)</p>
 </li>
 </ul>
 </div>
