@@ -29,16 +29,6 @@ https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-backup-to-clo
 
 NOTE: ONTAP consistency points in the WAFL file system determine data consistency. Only ONTAP can quiesce the WAFL file system to make a crash-consistent backup.
 
-== Support in China regions
-
-Cloud Volumes ONTAP is supported in China regions as follows.
-
-*	Cloud Volumes ONTAP 9.6 is supported in AWS China regions.
-* Single node systems are supported.
-*	Licenses purchased directly from NetApp are supported.
-
-All other locations, versions, configurations, and licenses aren't supported.
-
 == Cloud Volumes ONTAP supports Reserved and On-demand VM instances
 
 Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Other types of VM instances aren't supported.

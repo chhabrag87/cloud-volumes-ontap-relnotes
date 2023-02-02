@@ -17,6 +17,28 @@ Cloud Volumes ONTAP 9.12.1 includes new enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of BlueXP (formerly Cloud Manager). See the https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html[BlueXP Release Notes^] for details.
 
+== 9.12.1 GA (2 February 2023)
+The General Availability (GA) release of Cloud Volumes ONTAP 9.12.1 is now available. The GA release includes bug fixes.
+
+=== Updates for Azure China regions
+Cloud Volumes ONTAP 9.11.1P4 is now supported in Azure China regions. Two new Azure China regions are supported:
+
+* Azure China North 3
+* Azure China East 3
+
+You can upgrade existing Cloud Volumes ONTAP systems in China regions to 9.11.1P4.
+
+Note that only single node systems with BYOL are supported in China regions.
+
+See all supported regions on link:https://bluexp.netapp.com/cloud-volumes-global-regions[the Cloud Volumes ONTAP Global Regions Maps page^].
+
+=== Updates for AWS China regions
+Cloud Volumes ONTAP 9.11.1 P4 is now supported in AWS China regions. You can upgrade existing Cloud Volumes ONTAP systems in China regions to 9.11.1P4.
+
+Note that only single node systems with BYOL are supported in China regions.
+
+See all supported regions on link:https://bluexp.netapp.com/cloud-volumes-global-regions[the Cloud Volumes ONTAP Global Regions Maps page^].
+
 == 9.12.1 RC1 (8 December 2022)
 Cloud Volumes ONTAP 9.12.1 Release Candidate 1 is now available in AWS, Azure, and Google Cloud. This release includes the following new features and enhancements.
 
