@@ -17,7 +17,7 @@ Cloud Volumes ONTAP 9.12.1 includes new enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of BlueXP (formerly Cloud Manager). See the https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html[BlueXP Release Notes^] for details.
 
-== 9.12.1 GA (2 February 2023)
+== 9.12.1 GA (14 February 2023)
 The General Availability (GA) release of Cloud Volumes ONTAP 9.12.1 is now available. The GA release includes bug fixes.
 
 === Updates for Azure China regions
