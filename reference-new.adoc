@@ -21,10 +21,9 @@ Additional features and enhancements are also introduced in the latest versions 
 The General Availability (GA) release of Cloud Volumes ONTAP 9.12.1 is now available. The GA release includes bug fixes.
 
 === Updates for Azure China regions
-Cloud Volumes ONTAP 9.12.1 is now supported in Azure China regions. Two new Azure China regions are supported:
+Cloud Volumes ONTAP 9.12.1 is now supported in Azure China regions. One new Azure China region is supported:
 
 * Azure China North 3
-* Azure China East 3
 
 You can upgrade existing Cloud Volumes ONTAP systems in China regions to 9.12.1.
 
