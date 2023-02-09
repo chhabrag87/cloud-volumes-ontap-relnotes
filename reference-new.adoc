@@ -17,8 +17,8 @@ Cloud Volumes ONTAP 9.12.1 includes new enhancements.
 
 Additional features and enhancements are also introduced in the latest versions of BlueXP (formerly Cloud Manager). See the https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html[BlueXP Release Notes^] for details.
 
-== 9.12.1 GA (2 February 2023)
-The General Availability (GA) release of Cloud Volumes ONTAP 9.12.1 is now available. The GA release includes bug fixes.
+== 9.12.1 GA (9 February 2023)
+The General Availability (GA) release of Cloud Volumes ONTAP 9.12.1 is now available in AWS, Azure, and Google Cloud. The GA release includes bug fixes.
 
 == 9.12.1 RC1 (8 December 2022)
 Cloud Volumes ONTAP 9.12.1 Release Candidate 1 is now available in AWS, Azure, and Google Cloud. This release includes the following new features and enhancements.
@@ -43,11 +43,13 @@ For more information about the HA configuration architecture and components, see
 When you deploy a new HA pair in Azure in a single availability zone, you will now be using LRS shared managed disks rather than page blobs for storage. There's no change to the Working Environment wizard. You simply need to choose a Single Availability Zone to use this new configuration. For details, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html[Launching a Cloud Volumes ONTAP HA pair in Azure^].
 
 === Azure HA in multiple availability zones with shared managed disks
-You can now deploy a Cloud Volumes ONTAP HA configuration using Azure multiple availability zones within a region. The new configuration protects against data center failure and maintains application availability with the use of Azure zone-redundant storage (ZRS) shared managed disks. 
+You can now deploy a Cloud Volumes ONTAP HA configuration using Azure multiple availability zones within a region. The new configuration protects against data center failure and maintains application availability with the use of Azure zone-redundant storage (ZRS) shared managed disks. This feature is currently available only in the West US 2, West Europe, North Europe, and France Central regions. 
 
 For more information about the HA configuration architecture and components, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-azure.html[High-availability pairs in Azure^]. 
 
 To use this new configuration, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-otc-azure.html[Launching a Cloud Volumes ONTAP HA pair in Azure^].
+
+To learn more about zone-redundant storage for managed disks, refer to link:https://learn.microsoft.com/en-us/azure/virtual-machines/disks-redundancy#zone-redundant-storage-for-managed-disks[Microsoft Azure's documentation.]
 
 == Upgrade notes
 
