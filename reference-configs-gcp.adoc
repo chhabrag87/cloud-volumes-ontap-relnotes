@@ -51,8 +51,8 @@ a|
 * n1-standard-32
 * n2-standard-16
 * n2-standard-32
-* n2-standard-48
-* n2-standard-64
+* n2-standard-48 ^7^
+* n2-standard-64 ^7^
 a|
 * n1-standard-8
 * n1-standard-32
@@ -91,6 +91,8 @@ If you have an existing system running on this machine type, you can keep using 
 . For Google Cloud Platform region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
 
 . Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
+
+. 
 
 == Supported disk sizes
 
