@@ -51,6 +51,8 @@ a|
 * n1-standard-32
 * n2-standard-16
 * n2-standard-32
+* n2-standard-48
+* n2-standard-64
 a|
 * n1-standard-8
 * n1-standard-32
