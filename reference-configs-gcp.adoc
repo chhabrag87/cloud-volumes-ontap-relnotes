@@ -90,6 +90,14 @@ If you have an existing system running on this machine type, you can keep using 
 
 . Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
 
+. Starting with Cloud Volumes ONTAP software version 9.13.0, _Flash cache_, low durability mode (LDM), and Jumbo Frames (8896 Maximum transmission unit), are available for the following instances by default: 
+* n2-standard-16
+* n2-standard-32
+* n2-standard-48
+* n2-standard-64
++ 
+NOTE: _Flash cache_, LDM, and Jumbo Frames are feature-dependent and cannot be disabled individually within a configured instance. 
+
 == Supported disk sizes
 
 In Google Cloud, an aggregate can contain up to 6 disks that are all the same type and size. The following disk sizes are supported:
