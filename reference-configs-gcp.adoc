@@ -90,7 +90,7 @@ If you have an existing system running on this machine type, you can keep using 
 
 . Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
 
-. Starting with Cloud Volumes ONTAP software version 9.13.0, _Flash cache_, low durability mode (LDM), and Jumbo Frames (8896 Maximum transmission unit), are available for the following instances by default: 
+. Starting with Cloud Volumes ONTAP software version 9.13.0, _Flash cache_, high write mode, and jumbo frames (8896 Maximum transmission unit), are available for the following instances by default: 
 * n2-standard-16
 * n2-standard-32
 * n2-standard-48
