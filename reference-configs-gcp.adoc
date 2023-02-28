@@ -96,7 +96,7 @@ If you have an existing system running on this machine type, you can keep using 
 * n2-standard-48
 * n2-standard-64
 + 
-NOTE: _Flash cache_, LDM, and Jumbo Frames are feature-dependent and cannot be disabled individually within a configured instance. 
+NOTE: _Flash cache_, high write mode, and jumbo frames are feature-dependent and cannot be disabled individually within a configured instance. 
 
 == Supported disk sizes
 
