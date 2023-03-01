@@ -96,7 +96,7 @@ If you have an existing system running on this machine type, you can keep using 
 * n2-standard-48
 * n2-standard-64
 + 
-You can enable _Flash cache_, and high write mode when deploying an eligible instance type. To enable the higher maximum transmission unit of 8,866, you must chose VPC-1, VPC-2, or VPC-3 for the deployment. The higher MTU enables higher network throughput. For more information on launching one of these deployments, see https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud[Launching an HA pair in Google Cloud].
+You can enable _Flash cache_, and high write mode when deploying an eligible instance type. To enable the higher maximum transmission unit of 8,896, you must chose VPC-1, VPC-2, or VPC-3 for the deployment. The higher MTU enables higher network throughput. For more information on launching one of these deployments, see https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud[Launching an HA pair in Google Cloud].
 + 
 NOTE: _Flash cache_, high write mode, and an MTU of 8,896 are feature-dependent and cannot be disabled individually within a configured instance. 
 
