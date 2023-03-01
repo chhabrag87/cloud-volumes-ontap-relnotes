@@ -90,13 +90,13 @@ If you have an existing system running on this machine type, you can keep using 
 
 . Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
 
-. Starting with Cloud Volumes ONTAP software version 9.13.0, _Flash cache_, high write mode, and a higher maximum transmission unit (MTU) of 8,896 bytes, are available for the following instances: 
+. Starting with Cloud Volumes ONTAP software version 9.13.0, _Flash Cache_, high write speed, and a higher maximum transmission unit (MTU) of 8,896 bytes, are available for the following HA pair deployment instances: 
 * n2-standard-16
 * n2-standard-32
 * n2-standard-48
 * n2-standard-64
 + 
-You can enable _Flash cache_, and high write mode when deploying an eligible instance type. To enable the higher maximum transmission unit of 8,896 bytes, you must chose VPC-1, VPC-2, or VPC-3 for the deployment. The higher MTU enables higher network throughput. For more information on launching one of these deployments, see https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud[Launching an HA pair in Google Cloud].
+You can enable _Flash Cache_, and high write speed when deploying an eligible instance type. To enable the higher maximum transmission unit of 8,896 bytes, you must chose VPC-1, VPC-2, or VPC-3 for the deployment. The higher MTU enables higher network throughput. For more information on launching one of these deployments, see https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud[Launching an HA pair in Google Cloud].
 + 
 NOTE: _Flash cache_, high write mode, and an MTU of 8,896 are feature-dependent and cannot be disabled individually within a configured instance. 
 
