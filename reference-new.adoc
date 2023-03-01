@@ -21,7 +21,9 @@ Additional features and enhancements are also introduced in the latest versions 
 The General Availability (GA) release of Cloud Volumes ONTAP 9.13.0 is now available in AWS, Azure, and Google Cloud. This release includes the following new features and enhancements.
 
 === Flash Cache and high write speed in Google Cloud
-Support for Flash Cache, high write speed, and a high maximum transmission unit (MTU) of 8,896 bytes is now available for select instances with the Cloud Volumes ONTAP 9.13.0 release. For more information on compatibility with these latest features, see link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html[Supported configurations by license for Google Cloud^].
+Support for Flash Cache, high write speed, and a high maximum transmission unit (MTU) of 8,896 bytes is now available for select instances with the Cloud Volumes ONTAP 9.13.0 release. 
+
+Learn more about link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html[supported configurations by license for Google Cloud^]
 
 === Image verification for Azure and Google Cloud
 Enhanced security features are now available for verifying image file signatures exported through Azure and Google Cloud. For more information on these security features, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-azure-image-verification.html[Azure Image Verification and Google Cloud Image Verification^].
