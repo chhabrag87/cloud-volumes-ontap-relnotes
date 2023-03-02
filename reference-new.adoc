@@ -25,8 +25,10 @@ Support for Flash Cache, high write speed, and a high maximum transmission unit 
 
 Learn more about link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-gcp.html[supported configurations by license for Google Cloud^].
 
-=== Image verification for Azure and Google Cloud
-Enhanced security features are now available for verifying image file signatures exported through Azure and Google Cloud. For more information on these security features, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-azure-image-verification.html[Azure Image Verification and Google Cloud Image Verification^].
+=== Image verification in Google Cloud
+Enhanced security features are now available for verifying signatures of Cloud Volumes ONTAP image files exported through Google Cloud. 
+
+link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-gcp-image-verification.html[Learn more about Google Cloud Image Verification^].
 
 === New instance support in Google Cloud
 Freemium, PAYGO Premium, node-based BYOL, and capacity-based licenses now support two new instance types for Cloud Volumes ONTAP single node and high-availability deployments in Google Cloud. 
