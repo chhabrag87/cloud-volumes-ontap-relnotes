@@ -79,7 +79,7 @@ TIP: Automatic upgrades of the Connector are enabled by default so you should be
 
 === c4, m4, and r4 instances no longer supported
 
-In AWS, the c4, m4, and r4 EC2 instance types are no longer supported with Cloud Volumes ONTAP. If you have an existing system that’s running on a c4, m4, or r4 instance type, you must change to an instance type in the c5, m5, or r5 instance family.
+In AWS, the c4, m4, and r4 EC2 instance types are no longer supported with Cloud Volumes ONTAP. If you have an existing system that's running on a c4, m4, or r4 instance type, you must change to an instance type in the c5, m5, or r5 instance family. You can't upgrade to this release until you change the instance type. 
  
 link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-change-ec2-instance.html[Learn how to change the EC2 instance type for Cloud Volumes ONTAP^].
 
