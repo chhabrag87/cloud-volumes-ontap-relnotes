@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference-new.html
 keywords: what's new, new, features, release notes, enhancements
-summary: Cloud Volumes ONTAP 9.12.1 includes a new enhancement.
+summary: Cloud Volumes ONTAP 9.13.0 includes a new enhancement.
 ---
 
 = What's new in Cloud Volumes ONTAP 9.13.0
