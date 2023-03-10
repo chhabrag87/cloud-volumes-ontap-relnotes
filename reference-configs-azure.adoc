@@ -366,3 +366,5 @@ The following disk sizes are supported:
 * 2 TiB
 * 4 TiB
 * 8 TiB
+* 16 TiB (managed disks only)
+* 32 TiB (managed disks only)
