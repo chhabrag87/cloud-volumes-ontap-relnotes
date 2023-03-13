@@ -130,7 +130,7 @@ Notes:
 
 . Data tiering to Azure Blob storage isn't supported with PAYGO Explore.
 
-. This VM type includes local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html[Learn more^].
+. This VM type includes local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html[Learn more^].
 
 . These VM types use an https://docs.microsoft.com/en-us/azure/virtual-machines/windows/disks-enable-ultra-ssd[Ultra SSD^] for VNVRAM, which provides better write performance.
 +
@@ -260,8 +260,8 @@ a|
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
-* L16s_v3 ^1,3^
-* L32s_v3 ^1,3^
+* L16s_v3 ^1,3,5^
+* L32s_v3 ^1,3,5^
 
 a|
 * E8ds_v4 ^4^
@@ -270,24 +270,24 @@ a|
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
-* L16s_v3 ^1,3^
-* L32s_v3 ^1,3^
+* L16s_v3 ^1,3,5^
+* L32s_v3 ^1,3,5^
 
 a|
 * E8ds_v4 ^4^ 
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
-* L16s_v3 ^1,3^
-* L32s_v3 ^1,3^
+* L16s_v3 ^1,3,5^
+* L32s_v3 ^1,3,5^
 
 a|
 * E8ds_v4 ^4^
 * E32ds_v4 ^1,4^
 * E48ds_v4 ^1,4^
 * E80ids_v4 ^1,2,4^
-* L16s_v3 ^1,3^
-* L32s_v3 ^1,3^
+* L16s_v3 ^1,3,5^
+* L32s_v3 ^1,3,5^
 
 | Supported disk types 5+| Managed disks
 
@@ -302,6 +302,8 @@ Notes:
 . These VM types are only supported for HA pairs in a single availability zone configuration running on shared managed disks. 
 
 . These VM types are supported for HA pairs in single availability zone and multiple availability zone configurations running on shared managed disks.
+
+. This VM type includes local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html[Learn more^].
 
 //. PAYGO Explore isn't supported with HA pairs in Azure.
 
