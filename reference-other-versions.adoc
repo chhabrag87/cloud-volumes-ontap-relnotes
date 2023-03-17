@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: reference-other-versions.html
 keywords: Cloud Volumes ONTAP, versions, other versions, latest, other releases, version selector, previous versions
-summary: If you aren't running the latest Cloud Volumes ONTAP version, the documentation for other releases is available. You can use the version selector to navigate between the latest version and three previous versions or use the following links.
+summary: If you aren't running the latest Cloud Volumes ONTAP version, the documentation for other releases is available. You can use the version selector in the top right corner of the page or use the following links to find another version.
 ---
 
 = Other versions
@@ -15,7 +15,6 @@ summary: If you aren't running the latest Cloud Volumes ONTAP version, the docum
 [.lead]
 If you aren't running the latest Cloud Volumes ONTAP version, the documentation for other releases is available. You can use the version selector in the top right corner of the page or use the following links.
 
-* link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/index.html[Cloud Volumes ONTAP 9.13.0^] 
 * link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9121-relnotes/index.html[Cloud Volumes ONTAP 9.12.1^]
 * link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9120-relnotes/index.html[Cloud Volumes ONTAP 9.12.0^]
 * link:https://docs.netapp.com/us-en/cloud-volumes-ontap-9111-relnotes/index.html[Cloud Volumes ONTAP 9.11.1^]
