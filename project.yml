@@ -57,8 +57,6 @@ sidebar:
       url: /index.html
     - title: What's new
       url: /reference-new.html
-    - title: Other versions
-      url: /reference-other-versions.html  
     - title: Licensing overview
       url: /concept-licensing.html
     - title: Supported configurations

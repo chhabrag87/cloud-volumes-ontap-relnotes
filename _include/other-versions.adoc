@@ -1,17 +1,3 @@
----
-sidebar: sidebar
-permalink: reference-other-versions.html
-keywords: Cloud Volumes ONTAP, versions, other versions, latest, other releases, version selector, previous versions
-summary: If you aren't running the latest Cloud Volumes ONTAP version, the documentation for other releases is available. You can use the version selector in the top right corner of the page or use the following links to find another version.
----
-
-= Other versions
-:hardbreaks:
-:nofooter:
-:icons: font
-:linkattrs:
-:imagesdir: ./media/
-
 [.lead]
 If you aren't running the latest Cloud Volumes ONTAP version, the documentation for other releases is available. You can use the version selector in the top right corner of the page or use the following links.
 
