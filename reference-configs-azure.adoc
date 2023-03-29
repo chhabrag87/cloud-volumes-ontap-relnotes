@@ -229,7 +229,7 @@ Notes:
 
 . This VM is recommended only when Azure maintenance control is needed. It's not recommended for any other use case due to the higher pricing.
 
-. These VM types are only supported in deployments of Cloud Volumes ONTAP 9.11.1 or earlier. 
+. These VMs are only supported in deployments of Cloud Volumes ONTAP 9.11.1 or earlier. With these VM types you can upgrade an existing page blob deployment from Cloud Volumes ONTAP 9.11.1 to 9.12.1. You cannot perform new page blob deployments with Cloud Volumes ONTAP 9.12.1 or above. 
 
 //. This VM is recommended only when Azure maintenance control is needed. It's not recommended for any other use case due to the higher pricing.
 
