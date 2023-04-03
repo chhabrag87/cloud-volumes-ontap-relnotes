@@ -32,6 +32,16 @@
   <link rel="stylesheet" href="/us-en/cloud-volumes-ontap-relnotes/css/landing-page.css" type="text/css">
   <link rel="stylesheet" href="/us-en/cloud-volumes-ontap-relnotes/css/tabbed-blocks.css" type="text/css">
   <!-- Canonical url -->
+  <link rel="canonical" href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-gcp.html" />
+  <link rel="alternate" hreflang="x-default" href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-gcp.html" />
+  <link rel="alternate" hreflang="en" href="https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-gcp.html" />
+  <link rel="alternate" hreflang="ja" href="https://docs.netapp.com/ja-jp/cloud-volumes-ontap-relnotes/reference-limits-gcp.html" />
+  <link rel="alternate" hreflang="ko" href="https://docs.netapp.com/ko-kr/cloud-volumes-ontap-relnotes/reference-limits-gcp.html" />
+  <link rel="alternate" hreflang="zh-Hans" href="https://docs.netapp.com/zh-cn/cloud-volumes-ontap-relnotes/reference-limits-gcp.html" />
+  <link rel="alternate" hreflang="zh-Hant" href="https://docs.netapp.com/zh-tw/cloud-volumes-ontap-relnotes/reference-limits-gcp.html" />
+  <link rel="alternate" hreflang="de" href="https://docs.netapp.com/de-de/cloud-volumes-ontap-relnotes/reference-limits-gcp.html" />
+  <link rel="alternate" hreflang="es" href="https://docs.netapp.com/es-es/cloud-volumes-ontap-relnotes/reference-limits-gcp.html" />
+  <link rel="alternate" hreflang="fr" href="https://docs.netapp.com/fr-fr/cloud-volumes-ontap-relnotes/reference-limits-gcp.html" />
   <link rel='stylesheet' href='/us-en/cloud-volumes-ontap-relnotes/css/na-feature.css' type='text/css'><!-- Top level site integrations --><script>
     function addAdobeLaunch(adobeId) {
       var head = document.getElementsByTagName('head')[0];
@@ -782,7 +792,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-10-27 19:58:40 +0000">10/27/2022</time>
+    <time datetime="2023-03-30 17:52:30 +0000">03/30/2023</time>
     
   
 
@@ -792,6 +802,14 @@
           alt="netapp-bcammett"
           width="20" height="20"
           src="https://avatars.githubusercontent.com/u/18287750?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-driley">
+    <img  class="avatar avatar-small"
+          alt="netapp-driley"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/18422994?v=4"
           style="border-radius: 50%;"/>
   </a>
   
@@ -1197,6 +1215,17 @@
 </tr>
 </tbody>
 </table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cloud-volumes-ontap-ha-pairs-do-not-support-immediate-storage-giveback">Cloud Volumes ONTAP HA pairs do not support immediate storage giveback</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After a node reboots, the partner must sync data before it can return the storage. The time that it takes to resync data depends on the amount of data written by clients while the node was down and the data write speed during the time of giveback.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-ha-google-cloud.html" target="_blank" rel="noopener">Learn how storage works in a Cloud Volumes ONTAP HA pair running in Google Cloud</a>.</p>
+</div>
 </div>
 </div>
 
