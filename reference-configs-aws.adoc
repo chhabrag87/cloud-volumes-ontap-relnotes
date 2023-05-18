@@ -154,27 +154,27 @@ The bandwidths shown in the table below match the documented AWS limits for each
 
 | c5n.9xlarge | 36 | 96 | Not supported | 50 | 9,500 | Supported
 
-| c5a.12xlarge | 48 ^4^ | 96 | Not supported | 12 | 4,750 | Supported
+| c5a.12xlarge | 48 | 96 | Not supported | 12 | 4,750 | Supported
 
-| c5.18xlarge | 48 ^4^ | 144 | Not supported | 25 | 19,000 | Supported
+| c5.18xlarge | 64 ^4^ | 144 | Not supported | 25 | 19,000 | Supported
 
-| c5d.18xlarge | 48 ^4^ | 144 | Supported | 25 | 19,000 | Supported
+| c5d.18xlarge | 64 ^4^ | 144 | Supported | 25 | 19,000 | Supported
 
 | m5d.12xlarge | 48 | 192 | Supported | 12 | 9,500 | Supported
 
 | m5dn.12xlarge | 48 | 192 | Supported | 50 | 9,500 | Supported
 
-| c5n.18xlarge | 48 ^4^ | 192 | Not supported | 100 | 19,000 | Supported
+| c5n.18xlarge | 64 ^4^ | 192 | Not supported | 100 | 19,000 | Supported
 
-| m5a.16xlarge | 48 ^4^ | 256 | Not supported | 12 | 9,500 | Supported
+| m5a.16xlarge | 64 | 256 | Not supported | 12 | 9,500 | Supported
 
-| m5.16xlarge | 48 ^4^ | 256 | Not supported | 20 | 13,600 | Supported
+| m5.16xlarge | 64 | 256 | Not supported | 20 | 13,600 | Supported
 
 | r5.12xlarge ^3^ | 48 | 384 | Not supported | 10 | 9,500 | Supported
 
-| m5dn.24xlarge | 48 ^4^ | 384 | Supported | 100 | 19,000 | Supported
+| m5dn.24xlarge | 64 ^4^ | 384 | Supported | 100 | 19,000 | Supported
 
-| m6id.32xlarge | 48 ^4^ | 512 | Supported | 50 | 40,000 | Supported
+| m6id.32xlarge | 64 ^4^ | 512 | Supported | 50 | 40,000 | Supported
 
 |===
 
@@ -184,7 +184,7 @@ The bandwidths shown in the table below match the documented AWS limits for each
 
 . The r5.12xlarge instance type has a known limitation with supportability. If a node unexpectedly reboots due to a panic, the system might not collect core files used to troubleshoot and root cause the problem. The customer accepts the risks and limited support terms and bears all support responsibility if this condition occurs. This limitation affects newly deployed HA pairs and HA pairs upgraded from 9.8. The limitation does not affect newly deployed single node systems.
 
-. While these EC2 instance types support more than 48 vCPUs, Cloud Volumes ONTAP supports up to 48 vCPUs.
+. While these EC2 instance types support more than 64 vCPUs, Cloud Volumes ONTAP supports up to 64 vCPUs.
 
 . When you choose an EC2 instance type, you can specify whether it is a shared instance or a dedicated instance.
 
