@@ -598,7 +598,7 @@
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
 </script><div class="prod-nav" id="product-nav">
-  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/us-en/cloud-manager-family/"><img src="/us-en/cloud-volumes-ontap-relnotes/images/left_arrow.png" alt=""><pre>All BlueXP documentation</pre></a>
+  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/us-en/bluexp-family/"><img src="/us-en/cloud-volumes-ontap-relnotes/images/left_arrow.png" alt=""><pre>All BlueXP documentation</pre></a>
 </div><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li 
       data-pdf-exists="true" 
@@ -774,7 +774,7 @@
 
         
         <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com/us-en/cloud-manager-family/">BlueXP</a>
+          <a href="https://docs.netapp.com/us-en/bluexp-family/">BlueXP</a>
         </li>
         
 
@@ -796,7 +796,7 @@
 <p class="page-details">
   
     
-    <time datetime="2023-05-19 11:20:00 +0000">05/19/2023</time>
+    <time datetime="2023-05-24 19:57:48 +0000">05/24/2023</time>
     
   
 
@@ -894,7 +894,7 @@
 <p>For an HA pair, the capacity limit is for the entire HA pair. It&#8217;s not per node. For example, if you use the Premium license, you can have up to 368 TiB of capacity between both nodes.</p>
 </li>
 <li>
-<p>For some configurations, disk limits prevent you from reaching the capacity limit by using disks alone. In those cases, you can reach the capacity limit by <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">tiering inactive data to object storage</a>. For information about disk limits, refer to <a href="reference-limits-aws.html">storage limits</a>.</p>
+<p>For some configurations, disk limits prevent you from reaching the capacity limit by using disks alone. In those cases, you can reach the capacity limit by <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">tiering inactive data to object storage</a>. For information about disk limits, refer to <a href="reference-limits-aws.html">storage limits</a>.</p>
 </li>
 <li>
 <p>Enhanced write performance is enabled when using SSDs with all Cloud Volumes ONTAP configurations, except for PAYGO Explore.</p>
@@ -908,7 +908,7 @@
 <div class="sect2">
 <h3 id="supported-disk-sizes">Supported disk sizes</h3>
 <div class="paragraph">
-<p>In AWS, an aggregate can contain up to 6 disks that are all the same size. But if you have a configuration that supports the Amazon EBS Elastic Volumes feature, then an aggregate can contain up to 8 disks. <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html" target="_blank" rel="noopener">Learn more about support for Elastic Volumes</a></p>
+<p>In AWS, an aggregate can contain up to 6 disks that are all the same size. But if you have a configuration that supports the Amazon EBS Elastic Volumes feature, then an aggregate can contain up to 8 disks. <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html" target="_blank" rel="noopener">Learn more about support for Elastic Volumes</a></p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1287,10 +1287,10 @@
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Some instance types include local NVMe storage, which Cloud Volumes ONTAP uses as <em>Flash Cache</em>. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It&#8217;s effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-flash-cache.html" target="_blank" rel="noopener">Learn more about Flash Cache</a>.</p>
+<p>Some instance types include local NVMe storage, which Cloud Volumes ONTAP uses as <em>Flash Cache</em>. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It&#8217;s effective for random read-intensive workloads, including databases, email, and file services. Compression must be disabled on all volumes to take advantage of the Flash Cache performance improvements. <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html" target="_blank" rel="noopener">Learn more about Flash Cache</a>.</p>
 </li>
 <li>
-<p>Cloud Volumes ONTAP supports high write speed with most instance types when using an HA pair. High write speed is supported with all instance types when using a single node system. <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-write-speed.html" target="_blank" rel="noopener">Learn more about choosing a write speed</a>.</p>
+<p>Cloud Volumes ONTAP supports high write speed with most instance types when using an HA pair. High write speed is supported with all instance types when using a single node system. <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-write-speed.html" target="_blank" rel="noopener">Learn more about choosing a write speed</a>.</p>
 </li>
 <li>
 <p>The r5.12xlarge instance type has a known limitation with supportability. If a node unexpectedly reboots due to a panic, the system might not collect core files used to troubleshoot and root cause the problem. The customer accepts the risks and limited support terms and bears all support responsibility if this condition occurs. This limitation affects newly deployed HA pairs and HA pairs upgraded from 9.8. The limitation does not affect newly deployed single node systems.</p>

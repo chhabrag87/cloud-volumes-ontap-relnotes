@@ -598,7 +598,7 @@
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
 </script><div class="prod-nav" id="product-nav">
-  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/us-en/cloud-manager-family/"><img src="/us-en/cloud-volumes-ontap-relnotes/images/left_arrow.png" alt=""><pre>All BlueXP documentation</pre></a>
+  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/us-en/bluexp-family/"><img src="/us-en/cloud-volumes-ontap-relnotes/images/left_arrow.png" alt=""><pre>All BlueXP documentation</pre></a>
 </div><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li 
       data-pdf-exists="true" 
@@ -774,7 +774,7 @@
 
         
         <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com/us-en/cloud-manager-family/">BlueXP</a>
+          <a href="https://docs.netapp.com/us-en/bluexp-family/">BlueXP</a>
         </li>
         
 
@@ -796,7 +796,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-12-15 15:23:00 +0000">12/15/2022</time>
+    <time datetime="2023-05-12 12:41:48 +0000">05/12/2023</time>
     
   
 
@@ -820,7 +820,7 @@
 <p>NetApp doesn&#8217;t support exceeding the system capacity limit. If you reach the licensed capacity limit, BlueXP displays an action required message and no longer allows you to add additional disks.</p>
 </div>
 <div class="paragraph">
-<p>For some configurations, disk limits prevent you from reaching the capacity limit by using disks alone. In those cases, you can reach the capacity limit by <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">tiering inactive data to object storage</a>. Refer to capacity and disk limits below for more details.</p>
+<p>For some configurations, disk limits prevent you from reaching the capacity limit by using disks alone. In those cases, you can reach the capacity limit by <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">tiering inactive data to object storage</a>. Refer to capacity and disk limits below for more details.</p>
 </div>
 <table class="tableblock frame-all grid-all" style="width: 65%;">
 <colgroup>
@@ -937,7 +937,7 @@ HA pairs: 18 in a node <sup>1</sup></p></td>
 <p>The maximum aggregate size is based on the disks that comprise the aggregate. The limit does not include object storage used for data tiering.</p>
 </li>
 <li>
-<p>If you have a configuration that supports the Amazon EBS Elastic Volumes feature, then an aggregate can contain up to 8 disks, which provides up to 128 TiB of capacity. The Amazon EBS Elastic Volumes feature is enabled by default on <em>new</em> Cloud Volumes ONTAP 9.11.0 or later systems when using gp3 or io1 disks. <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-aws-elastic-volumes.html" target="_blank" rel="noopener">Learn more about support for Elastic Volumes</a></p>
+<p>If you have a configuration that supports the Amazon EBS Elastic Volumes feature, then an aggregate can contain up to 8 disks, which provides up to 128 TiB of capacity. The Amazon EBS Elastic Volumes feature is enabled by default on <em>new</em> Cloud Volumes ONTAP 9.11.0 or later systems when using gp3 or io1 disks. <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-aws-elastic-volumes.html" target="_blank" rel="noopener">Learn more about support for Elastic Volumes</a></p>
 </li>
 <li>
 <p>All disks in an aggregate must be the same size.</p>
@@ -974,7 +974,7 @@ HA pairs: 18 in a node <sup>1</sup></p></td>
 <div class="sect2">
 <h3 id="limits-for-capacity-based-licensing">Limits for capacity-based licensing</h3>
 <div class="paragraph">
-<p>The following disk limits apply to Cloud Volumes ONTAP systems that use a capacity-based licensing package. <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html" target="_blank" rel="noopener">Learn about Cloud Volumes ONTAP licensing options</a></p>
+<p>The following disk limits apply to Cloud Volumes ONTAP systems that use a capacity-based licensing package. <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html" target="_blank" rel="noopener">Learn about Cloud Volumes ONTAP licensing options</a></p>
 </div>
 <div class="sect3">
 <h4 id="single-node">Single node</h4>
@@ -1085,7 +1085,7 @@ HA pairs: 18 in a node <sup>1</sup></p></td>
 <li>
 <p>If you use node-based licensing, you can purchase multiple node-based licenses for a Cloud Volumes ONTAP BYOL system to allocate more than 368 TiB of capacity.</p>
 <div class="paragraph">
-<p>The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">tiering inactive data to object storage</a>. <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-manage-node-licenses.html" target="_blank" rel="noopener">Learn how to add additional system licenses to Cloud Volumes ONTAP</a>.</p>
+<p>The number of licenses that you can purchase for a single node system or HA pair is unlimited. Be aware that disk limits can prevent you from reaching the capacity limit by using disks alone. You can go beyond the disk limit by <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">tiering inactive data to object storage</a>. <a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-manage-node-licenses.html" target="_blank" rel="noopener">Learn how to add additional system licenses to Cloud Volumes ONTAP</a>.</p>
 </div>
 </li>
 </ul>
@@ -1334,7 +1334,7 @@ HA pairs: 18 in a node <sup>1</sup></p></td>
 <p>Some configurations enable you to create additional storage VMs (SVMs) for Cloud Volumes ONTAP.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html" target="_blank" rel="noopener">Learn how to create additional storage VMs</a>.</p>
+<p><a href="https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms-aws.html" target="_blank" rel="noopener">Learn how to create additional storage VMs</a>.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
