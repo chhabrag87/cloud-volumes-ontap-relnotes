@@ -15,4 +15,4 @@ Charging is based on the size of your committed capacity for one or more Cloud V
 
 The previous by-node licensing model remains available for existing customers who have already purchased a license or who have an active marketplace subscription.
 
-https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-licensing.html[Learn more about these licensing options^]
+https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-licensing.html[Learn more about these licensing options^]
