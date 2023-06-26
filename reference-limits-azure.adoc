@@ -119,7 +119,6 @@ The following disk limits apply to Cloud Volumes ONTAP systems that use a capaci
 |===
 
 ==== HA pairs in a single availability zone with page blobs
-
 [cols="14,20,31,33",width=68%,options="header"]
 |===
 | VM size
@@ -139,6 +138,7 @@ The following disk limits apply to Cloud Volumes ONTAP systems that use a capaci
 | E48ds_v4 | 29 | 232 TiB | 2 PiB
 | E80ids_v4 | 61 | 488 TiB | 2 PiB
 |===
+
 
 ==== HA pairs in a single availability zone with shared managed disks
 
