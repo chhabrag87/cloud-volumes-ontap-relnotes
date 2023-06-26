@@ -20,11 +20,6 @@ Additional features and enhancements are also introduced in the latest versions 
 == 9.13.1 RC1 (26 June 2023)
 The Release Candidate 1 of Cloud Volumes ONTAP 9.13.1 is now available in AWS, Azure, and Google Cloud. This release includes the following feature. 
 
-=== Flash Cache support for HA deployments in Google Cloud
-Support for Flash Cache is now available for high-availability pair deployments in Google Cloud. 
-
-Learn more about link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-deploying-gcp.html#launching-an-ha-pair-in-google-cloud[Launching an HA pair in Google Cloud^].
-
 == Upgrade notes
 
 Read through these notes to learn more about upgrading to this release.
