@@ -20,12 +20,6 @@ Additional features and enhancements are also introduced in the latest versions 
 == 9.13.1 GA (26 July 2023)
 The General Availability release of Cloud Volumes ONTAP 9.13.1 is now available in Azure and Google Cloud. 
 
-=== Support for Lsv3-series VMs in Azure
-The L16s_v3, L32s_v3, L48s_v3, and L64s_v3 instance types are now supported with Cloud Volumes ONTAP in Azure for single node systems and for HA pairs with shared managed disks in a single availability zone and in multiple availability zones, starting with the 9.13.1 release. These instance types support Flash Cache.
-
-link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-configs-azure.html[View supported configurations for Cloud Volumes ONTAP in Azure]
-link:https://docs.netapp.com/us-en/cloud-volumes-ontap-relnotes/reference-limits-azure.html[View storage limits for Cloud Volumes ONTAP in Azure]
-
 == 9.13.1 RC1 (26 June 2023)
 The Release Candidate 1 of Cloud Volumes ONTAP 9.13.1 is now available in AWS, Azure, and Google Cloud. 
 
