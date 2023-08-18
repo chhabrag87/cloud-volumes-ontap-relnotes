@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: reference-limitations.html
-keywords: limitations, detaching, snapmanager, features, disks, aggregates, features, svm
+keywords: limitations, detaching, snapmanager, features, disks, aggregates, features, svm, svm dr, SVM DR, SVM disaster recovery
 summary: Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 ---
 
@@ -16,6 +16,10 @@ summary: Known limitations identify platforms, devices, or functions that are no
 Known limitations identify platforms, devices, or functions that are not supported by this release of the product, or that do not interoperate correctly with it. Review these limitations carefully.
 
 The following limitations apply to Cloud Volumes ONTAP in all cloud providers: AWS, Azure, and Google Cloud.
+
+== SVM disaster recovery limitation
+
+If you set up SnapMirror SVM replication between two Cloud Volumes ONTAP systems, the replication must be between two HA pair systems or two single node systems. You can't set up SnapMirror SVM replication between a Cloud Volumes ONTAP HA pair and a single node system.
 
 == Maximum concurrent replication operations
 
