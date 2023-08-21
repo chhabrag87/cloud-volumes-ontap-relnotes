@@ -152,6 +152,8 @@ Conversely, if you deployed Cloud Volumes ONTAP using any other VM type, you won
 
 . Cloud Volumes ONTAP can run on either a Reserved or On-demand VM instance from your cloud provider. Solutions that use other VM instance types aren't supported.
 
+. SN only supports LRS managed disks for Standard SSD and HDD and Premium SSD.
+
 === HA pairs with shared managed disks
 You can choose from the following configurations when deploying Cloud Volumes ONTAP as an HA pair in Azure.
 
@@ -218,6 +220,8 @@ Notes:
 . These VM types are supported for HA pairs in single availability zone and multiple availability zone configurations running on shared managed disks.
 
 . This VM type includes local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html[Learn more^].
+
+. Redundancy options for HA configurations include Non-zonal HA pair using Premium LRS pageblob, Non-zonal VM HA pair using Premium LRS managed disk, and Multi-AZ VM HA pair using Premium ZRS managed disks.
 
 //. PAYGO Explore isn't supported with HA pairs in Azure.
 
