@@ -221,8 +221,6 @@ Notes:
 
 . This VM type includes local NVMe storage, which Cloud Volumes ONTAP uses as _Flash Cache_. Flash Cache speeds access to data through real-time intelligent caching of recently read user data and NetApp metadata. It is effective for random read-intensive workloads, including databases, email, and file services. https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/concept-flash-cache.html[Learn more^].
 
-. Redundancy options for HA configurations include Non-zonal HA pair using Premium LRS pageblob, Non-zonal VM HA pair using Premium LRS managed disk, and Multi-AZ VM HA pair using Premium ZRS managed disks.
-
 //. PAYGO Explore isn't supported with HA pairs in Azure.
 
 //. For Azure region support, see https://cloud.netapp.com/cloud-volumes-global-regions[Cloud Volumes Global Regions^].
