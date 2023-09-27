@@ -283,9 +283,8 @@ a|
 
 === HA pairs
 
-HA pairs use managed disks. (Page blobs are supported with HA pairs deployed before the 9.12.1 release.) 
-
-The following disk sizes are supported:
+HA systems use Premium SSD Shared Managed Disks which both provide high performance for I/O-intensive workloads at a higher cost. HA deployments created before the 9.12.1 release use Premium page blobs.
+The following Premium SSD disk sizes are supported:
 
 * 500 GiB
 * 1 TiB
